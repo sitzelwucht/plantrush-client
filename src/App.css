@@ -1,0 +1,80 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+
+.landing {
+  min-height: 100vh;
+  background-image: url('pexels-scott-webb-305827.jpg');
+}
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 800px;
+  height: 70vh;
+  margin: auto;
+  background: rgba(205,205,205,.7);
+  border-radius: 0 0 30px 30px;
+  backdrop-filter: blur(5px);
+}
+
+h2 {
+  width: 200px;
+  margin: 100px auto;
+  font-family: 'Berkshire Swash';
+  color: rgb(81, 136, 115);
+  font-size: 70px;
+}
+.intro-btns {
+  border-radius: 5px;
+  width: 500px;
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.intro-btns button {
+  margin: 40px;
+  border: none;
+  outline: none;
+  transition: .6s ease-in;
+}
+.intro-btns button:hover {
+  background: black!important;
+}
+.green {
+  background: rgb(81, 136, 115)!important;
+}
+
+.darkgreen {
+  background: rgba(107, 64, 57, 0.692)!important;
+}
+
+.light {
+  color: white
+}
+
+.greenrush {
+  background-image: url('pexels-scott-webb-305827.jpg');
+  height: 150px;
+}
+
+.menu {
+  font-size: 30px;
+}
+.menu a {
+  opacity: 1;
+}
+.menu a:hover {
+  background: rgba(220,220,220,.5);
+  border-radius: 5px;
+}
+
+.brand {
+  font-family: 'Berkshire Swash';
+  font-size: 45px;
+}
