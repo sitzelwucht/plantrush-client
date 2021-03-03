@@ -60,15 +60,13 @@ h2 {
 
 .greenrush {
   background-image: url('pexels-scott-webb-305827.jpg');
-  height: 150px;
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
 }
 
-.menu {
-  font-size: 30px;
-}
-.menu a {
-  opacity: 1;
-}
 .menu a:hover {
   background: rgba(220,220,220,.5);
   border-radius: 5px;
@@ -77,4 +75,16 @@ h2 {
 .brand {
   font-family: 'Berkshire Swash';
   font-size: 45px;
+}
+.forms {
+  width: 75%;
+  margin: auto;
+}
+
+.content-box {
+  background: rgb(180, 207, 182);
+  width: 45%;
+  margin: 150px auto;
+  padding: 30px;
+  position: static;
 }
