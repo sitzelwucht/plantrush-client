@@ -27,37 +27,33 @@ export default class NavBar extends Component {
   
         return (
             <header className="menu">
+           
+            <div className="greenrush">
             
-               <Navbar collapseOnSelect expand="lg" variant="dark greenrush">
-              
-             
-                <Link to="/home"><Navbar.Brand className="brand">plantrush </Navbar.Brand></Link>
-                
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                <Navbar.Collapse id="responsive-navbar-nav">
+                <div className="nav-top">
 
-              <Nav className="mr-auto">
-                <Nav.Link href="#features">My page</Nav.Link>
-                <NavDropdown title="Search" id="collasible-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">All plants</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">Posts by others</NavDropdown.Item>
-                  <NavDropdown.Divider />
-            
-                </NavDropdown>
-              </Nav>
-              <Nav>
+                {
+                    user ? (<Link to="/home"><div className="brand">plantrush</div></Link>) : null
+                  }
+                </div>
+              <div className="nav-link">
+                    
+              {
+                    user ? (<> <Link to="/mypage">My page</Link>
+                    <Link to="/plant-search">Search plants</Link>
+                      <Link to="/post-search">Search posts</Link> </>) : null
+                  }
+              </div>
 
-          {
-            user ? (<> <NavDropdown.Item href="#action/3.4">Loggedin in as {user.email.toString()}</NavDropdown.Item>
-                    <Button onClick={this.props.onLogout} variant="info">Logout</Button> </>) : null
-          }
-              </Nav>
-            </Navbar.Collapse>
+              <div className="nav-bottom">
+                {
+                    user ? (<> <div className="username"> Loggedin in as {user.email.toString()}</div>
+                      <Button onClick={this.props.onLogout} variant="info logoutBtn">Logout</Button> </>) : null
+                  }
+              </div>
+            </div>
 
-
-
-          </Navbar>
-            </header>
+          </header>
 
         )
     }

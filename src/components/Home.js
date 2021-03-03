@@ -27,7 +27,7 @@ export default class Home extends Component {
          
             <div>
             <div className="content-box">
-            { user ? <div>Welcome to your home page {user.email.toString()}</div> : 'Please log in to use this site' }
+            { user ? <div>Welcome to your home page {user.email}</div> : 'Please log in to use this site' }
          
             </div>
             </div>

@@ -20,6 +20,7 @@
   background: rgba(205,205,205,.7);
   border-radius: 0 0 30px 30px;
   backdrop-filter: blur(5px);
+  z-index: 10;
 }
 
 h2 {
@@ -60,31 +61,145 @@ h2 {
 
 .greenrush {
   background-image: url('pexels-scott-webb-305827.jpg');
-  background: rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 0;
   z-index: 1;
-  width: 100%;
+  width: 20%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.menu a {
+  color: rgb(228, 228, 228);
+  padding: 10px;
+  margin: 5px;
+  transition: .6s ease-in
 }
 
 .menu a:hover {
   background: rgba(220,220,220,.5);
   border-radius: 5px;
-}
+  text-decoration: none;
+  color: rgb(20,20,20)
 
+}
 .brand {
   font-family: 'Berkshire Swash';
-  font-size: 45px;
+  font-size: 35px;
+  margin: 12px;
+  padding: 0;
+  color: white;
+}
+
+.nav-top {
+  margin: 0;
+  text-align: center;
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+.nav-bottom {
+  padding: 30px;
+}
+
+.nav-bottom > div {
+  margin: 20px;
+}
+
+
+.username {
+  margin: 0 40px;
+  background: rgba(200,200,200, .6);
+  border-radius: 50px;
+  padding: 10px;
+}
+.logoutBtn {
+  margin: 0 30px;
 }
 .forms {
   width: 75%;
   margin: auto;
 }
-
 .content-box {
   background: rgb(180, 207, 182);
   width: 45%;
   margin: 150px auto;
   padding: 30px;
   position: static;
+}
+.my-page {
+  margin: 70px auto 0 auto;
+}
+.my-page-container {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 15px;
+  padding: 30px;
+  background: rgb(231, 231, 231);
+  width: 70%;
+  margin-top: 30px;
+  margin-left: 500px;
+}
+.my-page-header {
+  width: 40%;
+  margin: 20px auto 0 auto;
+  font-size: 40px;
+  font-family: 'comfortaa';
+  color: rgba(20,20,20,.7)!important;
+  justify-content: space-between;
+}
+.my-page-container h1 {
+  font-family: 'Comfortaa';
+}
+.my-page-container > div {
+  min-width: 550px;
+  max-width: 550px;
+}
+
+.sub-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 7px;
+  background: rgb(155, 155, 155);
+  color:white;
+}
+
+.list-item {
+  background: rgba(182, 207, 182,.7);
+  margin: 25px 0;
+}
+
+.item-row {
+  display: flex;
+  border: 1px solid green;
+  width: 100%;
+  color: rgba(20,20,20,.7);
+
+}
+
+.factfile span {
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+h5 {
+  padding: 10px
+}
+
+.searchbar {
+  margin: 250px auto;
+  width: 40%;
+}
+
+.searchbar h1 {
+  font-family: 'Comfortaa';
+  color: rgba(20,20,20,.7);
+  margin: 30px 0;
 }

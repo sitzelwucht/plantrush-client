@@ -10,6 +10,10 @@ import SignupForm from './components/SignupForm'
 import LoginForm from './components/LoginForm'
 import NavBar from './components/NavBar'
 import ModalComponent from './components/ModalComponent'
+import MyPage from './components/MyPage'
+import SearchPlants from './components/SearchPlants'
+import SearchPosts from './components/SearchPosts'
+
 
 class App extends Component {
 
@@ -104,10 +108,8 @@ class App extends Component {
       <Switch>
 
         <Route exact path="/" render={() => {
-
           return( <div className="landing">
                     <div className="intro">
-    
                     <h2><img src="/images/noun_Plant_9393.svg" alt="" /><span className="darkgreen light">plant</span><span>rush</span></h2>
                         <div className="intro-btns">
                         <ModalComponent 
@@ -116,17 +118,14 @@ class App extends Component {
                             modalHeading="log in"
                             modalBody={<LoginForm onLogin={this.handleLogin}/>}    
                             />
-        
                         <ModalComponent 
                             btnTitle="sign up" 
                             btnStyle="secondary darkgreen" 
                             modalHeading="sign up" 
                             modalBody={<SignupForm onSignup={this.handleSignup}/>}    
                             />
-                      
                         </div>     
                     </div>
-            
                 </div>)
                
         }} />
@@ -135,7 +134,18 @@ class App extends Component {
           return <Home user={loggedInUser} {...routeProps}/>
         }} />
 
-    
+        <Route path="/mypage" render={(routeProps) => {
+          return <MyPage user={loggedInUser} {...routeProps} />
+        }} />
+
+        <Route path="/plant-search" render={(routeProps) => {
+          return <SearchPlants user={loggedInUser} {...routeProps} />
+        }} />
+
+        <Route path="/post-search" render={(routeProps) => {
+          return <SearchPosts user={loggedInUser} {...routeProps} />
+        }} />
+
         </Switch>
       </div>
     )
