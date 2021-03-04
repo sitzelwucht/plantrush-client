@@ -14,50 +14,6 @@ import { withRouter } from 'react-router-dom'
         error: null
     }
 
-
-  handleSignup = (e) => {
-    e.preventDefault()
-    let newUser = {
-      email: e.target.email.value,
-      password: e.target.password.value,
-      password2: e.target.password.value
-    }
-    axios.post(`${config.API_URL}/api/signup`, newUser)
-    .then(response => {
-      this.setState({
-        loggedInUser : response.data
-      }, () => {
-        this.props.history.push('/home')
-      })
-    })
-    .catch(err => {
-      this.setState({
-        error: err.response.data
-      })
-    })
-  }
-
-
-  handleLogin = (e) => {
-    e.preventDefault()
-    let user = {
-      email: e.target.email.value,
-      password: e.target.password.value
-    }
-
-    axios.post(`${config.API_URL}/api/login`, user, { withCredentials: true })
-    .then(response => {
-      this.setState({
-        loggedInUser: response.data,
-      }, () => {
-        this.props.history.push('/home')
-      })
-    })
-    .catch(err => console.log('something went wrong while logging in', err))
-  }
-
-
-
   componentDidMount(){
     if (!this.state.loggedInUser) {
       axios.get(`${config.API_URL}/api/user`, { withCredentials: true })
@@ -85,13 +41,13 @@ import { withRouter } from 'react-router-dom'
                                btnTitle="log in" 
                                btnStyle="primary green" 
                                modalHeading="log in"
-                               modalBody={<LoginForm onLogin={this.handleLogin}/>}    
+                               modalBody={<LoginForm onLogin={this.props.onLogin}/>}    
                                />
                            <ModalComponent 
                                btnTitle="sign up" 
                                btnStyle="secondary darkgreen" 
                                modalHeading="sign up" 
-                               modalBody={<SignupForm onSignup={this.handleSignup}/>}    
+                               modalBody={<SignupForm onSignup={this.props.onSignup}/>}    
                                />
                            </div>     
                        </div>

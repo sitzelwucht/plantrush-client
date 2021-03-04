@@ -6,11 +6,8 @@ import config from './config'
 import 'bootstrap/dist/css/bootstrap.css'
 import './App.css';
 import Home from './components/Home'
-import SignupForm from './components/SignupForm'
-import LoginForm from './components/LoginForm'
 import NavBar from './components/NavBar'
 import Landing from './components/Landing'
-import ModalComponent from './components/ModalComponent'
 import MyPage from './components/MyPage'
 import SearchPlants from './components/SearchPlants'
 import SearchPosts from './components/SearchPosts'
@@ -23,7 +20,6 @@ class App extends Component {
     loggedInUser: null, 
     error: null,
   }
-
 
 
   handleSignup = (e) => {
@@ -50,6 +46,7 @@ class App extends Component {
 
 
   handleLogin = (e) => {
+    alert('hello')
     e.preventDefault()
     let user = {
       email: e.target.email.value,
@@ -70,7 +67,6 @@ class App extends Component {
 
 
   handleLogout = () => {
-    alert('bye')
     axios.post(`${config.API_URL}/api/logout`, {}, { withCredentials: true })
     .then(() => {
       this.setState({
@@ -110,31 +106,12 @@ class App extends Component {
 
         <Route exact path="/" render={() => {
           return <Landing onSignup={this.handleSignup} onLogin={this.handleLogin}/>
-            // return( <div className="landing">
-            //         <div className="intro">
-            //         <h2><img src="/images/noun_Plant_9393.svg" alt="" /><span className="darkgreen light">plant</span><span>rush</span></h2>
-            //             <div className="intro-btns">
-            //             <ModalComponent 
-            //                 btnTitle="log in" 
-            //                 btnStyle="primary green" 
-            //                 modalHeading="log in"
-            //                 modalBody={<LoginForm onLogin={this.handleLogin}/>}    
-            //                 />
-            //             <ModalComponent 
-            //                 btnTitle="sign up" 
-            //                 btnStyle="secondary darkgreen" 
-            //                 modalHeading="sign up" 
-            //                 modalBody={<SignupForm onSignup={this.handleSignup}/>}    
-            //                 />
-            //             </div>     
-            //         </div>
-            //     </div>)
           }
         } />
 
 
         <Route path="/home" render={(routeProps) => {
-          return <Home user={loggedInUser} {...routeProps}/>
+          return <Home user={loggedInUser} />
         }} />
 
         <Route path="/mypage" render={(routeProps) => {
