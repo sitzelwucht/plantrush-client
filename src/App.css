@@ -160,8 +160,8 @@ h2 {
   font-family: 'Comfortaa';
 }
 .my-page-container > div {
-  min-width: 850px;
-  max-width: 850px;
+  min-width: 900px;
+  max-width: 900px;
   max-height: 750px;
   overflow-y: scroll;
 }
@@ -175,7 +175,7 @@ h2 {
 }
 .tab a {
   font-size: 35px;
-  color: rgb(85, 141, 92);
+  color: rgb(109, 163, 151);
   font-family: 'comfortaa';
   letter-spacing: .1em;
 }
@@ -183,6 +183,7 @@ h2 {
   border: none!important;
   outline: none!important;
 }
+
 .list-item {
   margin: 25px 0;
 }
@@ -208,6 +209,7 @@ h5 {
   padding: 10px;
   color: rgba(153, 147, 150, 0.6);
   border-bottom: 1px solid grey;
+  text-align: right
 }
 
 .searchbar {
