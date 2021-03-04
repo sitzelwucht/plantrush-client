@@ -159,11 +159,19 @@ h2 {
 .my-page-container h1 {
   font-family: 'Comfortaa';
 }
-.my-page-container > div {
+/* .my-page-container > div {
   min-width: 900px;
   max-width: 900px;
   max-height: 750px;
   overflow-y: scroll;
+} */
+
+.my-page-container {
+  min-width: 70%;
+  max-width: 70%;
+  max-height: 750px;
+  overflow-y: scroll;
+  border: 1px solid rgb(190, 190, 190)
 }
 
 .sub-header {
@@ -179,6 +187,7 @@ h2 {
   font-family: 'comfortaa';
   letter-spacing: .1em;
 }
+
 .btn {
   border: none!important;
   outline: none!important;

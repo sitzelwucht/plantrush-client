@@ -5,10 +5,8 @@ import config from '../config'
 import MyPlantsList from './MyPlantsList'
 import MyPostsList from './MyPostsList'
 
+
 export default class MyPage extends Component {
-
-
-
     
     componentDidMount(){
 
@@ -25,8 +23,6 @@ export default class MyPage extends Component {
     
 
     render() {
-
-
         return (
             <div className="my-page">
                 <div className="my-page-header"><h1>My Page</h1></div>
