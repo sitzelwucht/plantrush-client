@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import ListItem from './ListItem'
-import { Button } from 'react-bootstrap'
+import { Tabs, Tab } from 'react-bootstrap'
 import axios from 'axios'
 import config from '../config'
+import MyPlantsList from './MyPlantsList'
+import MyPostsList from './MyPostsList'
 
 export default class MyPage extends Component {
 
@@ -21,31 +22,39 @@ export default class MyPage extends Component {
       }
     
 
-
-
     render() {
 
-        const { user } = this.props
-        console.log(user.email)
+
         return (
             <div className="my-page">
-            <div className="my-page-header"><h1>My Page </h1>{user.email}</div>
-            <div className="my-page-container">
+                <div className="my-page-header"><h1>My Page</h1></div>
+                    
+                    <div className="my-page-container">
 
-            <div className="plants-container">
-            <div className="sub-header"><h1>plants</h1><Button variant="dark">Add</Button></div>
-                <ListItem />
-                <ListItem />
-            </div>
+        
 
-            <div className="posts-container">
-            <div className="sub-header"><h1>posts</h1><Button variant="dark">Add</Button></div>
+        <div className="container tab">
 
-            </div>
+            <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
+                <Tab eventKey="plants" title="Plants">
+                    <MyPlantsList />
+                </Tab>
+                <Tab eventKey="posts" title="Posts">
+                    <MyPostsList />
+                </Tab>
+                </Tabs>
 
-            </div>
-            </div>
-            
-        )
-    }
+        </div>
+        </div>
+    </div>)
+
+
+
+
+}
+
+
+
+
+
 }

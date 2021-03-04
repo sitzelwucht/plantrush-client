@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Navbar, Nav, NavDropdown, Button } from 'react-bootstrap'
+import { Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import config from '../config'
@@ -29,15 +29,12 @@ export default class NavBar extends Component {
             <header className="menu">
            
             <div className="greenrush">
-            
                 <div className="nav-top">
-
                 {
                     user ? (<Link to="/home"><div className="brand">plantrush</div></Link>) : null
                   }
                 </div>
               <div className="nav-link">
-                    
               {
                     user ? (<> <Link to="/mypage">My page</Link>
                     <Link to="/plant-search">Search plants</Link>
@@ -52,7 +49,6 @@ export default class NavBar extends Component {
                   }
               </div>
             </div>
-
           </header>
 
         )

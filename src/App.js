@@ -9,6 +9,7 @@ import Home from './components/Home'
 import SignupForm from './components/SignupForm'
 import LoginForm from './components/LoginForm'
 import NavBar from './components/NavBar'
+import Landing from './components/Landing'
 import ModalComponent from './components/ModalComponent'
 import MyPage from './components/MyPage'
 import SearchPlants from './components/SearchPlants'
@@ -108,27 +109,29 @@ class App extends Component {
       <Switch>
 
         <Route exact path="/" render={() => {
-          return( <div className="landing">
-                    <div className="intro">
-                    <h2><img src="/images/noun_Plant_9393.svg" alt="" /><span className="darkgreen light">plant</span><span>rush</span></h2>
-                        <div className="intro-btns">
-                        <ModalComponent 
-                            btnTitle="log in" 
-                            btnStyle="primary green" 
-                            modalHeading="log in"
-                            modalBody={<LoginForm onLogin={this.handleLogin}/>}    
-                            />
-                        <ModalComponent 
-                            btnTitle="sign up" 
-                            btnStyle="secondary darkgreen" 
-                            modalHeading="sign up" 
-                            modalBody={<SignupForm onSignup={this.handleSignup}/>}    
-                            />
-                        </div>     
-                    </div>
-                </div>)
-               
-        }} />
+          return <Landing onSignup={this.handleSignup} onLogin={this.handleLogin}/>
+            // return( <div className="landing">
+            //         <div className="intro">
+            //         <h2><img src="/images/noun_Plant_9393.svg" alt="" /><span className="darkgreen light">plant</span><span>rush</span></h2>
+            //             <div className="intro-btns">
+            //             <ModalComponent 
+            //                 btnTitle="log in" 
+            //                 btnStyle="primary green" 
+            //                 modalHeading="log in"
+            //                 modalBody={<LoginForm onLogin={this.handleLogin}/>}    
+            //                 />
+            //             <ModalComponent 
+            //                 btnTitle="sign up" 
+            //                 btnStyle="secondary darkgreen" 
+            //                 modalHeading="sign up" 
+            //                 modalBody={<SignupForm onSignup={this.handleSignup}/>}    
+            //                 />
+            //             </div>     
+            //         </div>
+            //     </div>)
+          }
+        } />
+
 
         <Route path="/home" render={(routeProps) => {
           return <Home user={loggedInUser} {...routeProps}/>

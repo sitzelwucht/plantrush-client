@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import { Button } from 'react-bootstrap'
 
 export default class ListItem extends Component {
+    
     render() {
         return (
             <div className="list-item">
@@ -11,7 +13,10 @@ export default class ListItem extends Component {
                             <div><span>Species:</span> haworthia</div>
                             <div><span>Light:</span> medium</div>
                             <div><span>Watering:</span> low</div>
+                            <div>Some other info</div>
+                            <Button variant="light">more</Button>
                         </div>
+                        
                </div>
 
             </div>

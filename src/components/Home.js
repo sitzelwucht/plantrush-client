@@ -5,6 +5,10 @@ export default class Home extends Component {
 
 
 
+    state = {
+      time: new Date()
+    }
+
 
     componentDidMount(){
 
