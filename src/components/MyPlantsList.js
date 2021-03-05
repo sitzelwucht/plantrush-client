@@ -68,7 +68,7 @@ componentDidMount(){
      const { plants, showForm } = this.state
 
         return ( 
-                <div className="plants">
+                <div>
                     <div className="sub-header">
 
             {
@@ -80,12 +80,13 @@ componentDidMount(){
                     <div className="plants">
                      {
                         plants.map((item, i) => {
-                            return <PlantItem 
+                            return <div className="plant-item"><PlantItem 
                                     id={item._id}
                                     name={item.name} 
                                     description={item.description} 
                                     watering={item.watering} 
                                     light={item.light} />
+                                    </div>
                          })
                      }   
                     </div>

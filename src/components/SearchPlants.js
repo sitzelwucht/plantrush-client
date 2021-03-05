@@ -48,10 +48,6 @@ export default class SearchPlants extends Component {
       // }
     }
 
-    componentDidMount() {
-      this.getPlantData()
-    }
-
     componentDidUpdate() {
       this.getPlantData()
     }
