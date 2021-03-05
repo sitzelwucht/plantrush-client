@@ -7,7 +7,8 @@ export default class Home extends Component {
 
 
     state = {
-      loggedinUser: null
+      loggedinUser: null,
+      time: new Date()
     }
 
 
@@ -16,7 +17,8 @@ export default class Home extends Component {
           axios.get(`${config.API_URL}/api/user`, { withCredentials: true })
             .then((response) => {
                 this.setState({
-                  loggedInUser: response.data
+                  loggedInUser: response.data,
+                  time: new Date()
                 })
             })
             .catch((err) => {
@@ -32,7 +34,8 @@ export default class Home extends Component {
           axios.get(`${config.API_URL}/api/user`, { withCredentials: true })
             .then((response) => {
                 this.setState({
-                  loggedInUser: response.data
+                  loggedInUser: response.data,
+                  time: new Date()
                 })
 
             })
@@ -44,16 +47,19 @@ export default class Home extends Component {
     
 
     render() {
-    
-        const { user } = this.props
-
+        // const { loggedInUser } = this.state
+        // console.log('state ' + loggedInUser.email)
+        
+        const { user, time } = this.props
+        console.log(time)
               return (
           
               <div>
                 <div className="content-box">
-                { user ? <div>Welcome to your home page {user.email}</div> : 'Please log in to use this site because currently you\'re null' }
+                { user ? <div>Welcome to your home page {user.email} </div> : 'Please log in to use this site because currently you\'re null' }
             
                 </div>
+ 
               </div>
         )
 

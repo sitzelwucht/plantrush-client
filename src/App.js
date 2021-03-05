@@ -11,7 +11,8 @@ import Landing from './components/Landing'
 import MyPage from './components/MyPage'
 import SearchPlants from './components/SearchPlants'
 import SearchPosts from './components/SearchPosts'
-
+import PostDetail from './components/PostDetail'
+import PlantDetail from './components/PlantDetail'
 
 class App extends Component {
 
@@ -46,7 +47,6 @@ class App extends Component {
 
 
   handleLogin = (e) => {
-    alert('hello')
     e.preventDefault()
     let user = {
       email: e.target.email.value,
@@ -124,6 +124,14 @@ class App extends Component {
 
         <Route path="/post-search" render={(routeProps) => {
           return <SearchPosts user={loggedInUser} {...routeProps} />
+        }} />
+
+        <Route path="/post/:postid" render={(routeProps) => {
+          return <PostDetail user={loggedInUser} postid={routeProps.match.params.postid} />
+        }} />
+
+        <Route path="/plant/:plantid" render={(routeProps) => {
+          return <PlantDetail user={loggedInUser} plantid={routeProps.match.params.plantid} />
         }} />
 
         </Switch>

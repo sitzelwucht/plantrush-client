@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import { Form, Button } from 'react-bootstrap'
 
-export default class AddPlantForm extends Component {
+export default class EditPlantForm extends Component {
 
 
     render() {
         return (
-            <div>
+            <div className="edit-form">EDIT
                 <Form onSubmit={this.props.onAdd}>
                 <Form.Group controlId="formBasicEmail">
                     <Form.Label>Name</Form.Label>

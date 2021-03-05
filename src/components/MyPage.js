@@ -7,6 +7,8 @@ import MyPostsList from './MyPostsList'
 
 
 export default class MyPage extends Component {
+
+
     
     componentDidMount(){
 

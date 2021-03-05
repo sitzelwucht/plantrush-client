@@ -38,7 +38,6 @@ export default class ModalComponent extends Component {
               {this.props.modalBody}
               
               </Modal.Body>
-
             </Modal>
             </div>
         )

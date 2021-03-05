@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import ModalComponent from './ModalComponent'
 import AddPlantForm from './AddPlantForm'
+import { Button } from 'react-bootstrap'
 import PlantItem from './PlantItem'
 import axios from 'axios'
 import config from '../config'
@@ -10,7 +10,8 @@ export default class MyPlantsList extends Component {
 
 
     state = {
-        plants: []
+        plants: [],
+        showForm: false
     }
 
     handleAddPlant = (e) => {
@@ -28,17 +29,22 @@ export default class MyPlantsList extends Component {
     })
     .then(response => {
         this.setState({
-            plants: [response.data, ...this.state.plants]
+            plants: [response.data, ...this.state.plants],
+            showForm: false
         })
     })
 }
 
+    handleShowForm = () => {
+        this.setState({
+            showForm: true
+        })
+    }
 
 componentDidMount(){
 
     axios.get(`${config.API_URL}/api/myplants`)
       .then((response) => {
-        console.log(response.data)
         this.setState({ plants: response.data})
       })
       .catch(() => {
@@ -59,17 +65,15 @@ componentDidMount(){
   }
 
     render() {
-     const { plants } = this.state
+     const { plants, showForm } = this.state
 
         return ( 
                 <div className="plants">
                     <div className="sub-header">
-                <ModalComponent 
-                    btnTitle="add plant" 
-                    btnStyle="primary green" 
-                    modalHeading="Add Plant"
-                    modalBody={<AddPlantForm onAdd={this.handleAddPlant}/>}    
-                />
+
+            {
+                showForm ? <AddPlantForm onAdd={this.handleAddPlant}/> : <Button onClick={this.handleShowForm} >Add Plant </Button>
+            }
 
                     </div>
                     
@@ -77,6 +81,7 @@ componentDidMount(){
                      {
                         plants.map((item, i) => {
                             return <PlantItem 
+                                    id={item._id}
                                     name={item.name} 
                                     description={item.description} 
                                     watering={item.watering} 

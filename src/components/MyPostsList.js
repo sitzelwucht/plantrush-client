@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
-import ModalComponent from './ModalComponent'
+import { Button } from 'react-bootstrap'
 import AddPostForm from './AddPostForm'
 import PostItem from './PostItem'
 import axios from 'axios'
 import config from '../config'
-
 
 export default class MyPostsList extends Component {
 
 
     state = {
         posts: [],
+        showForm: false
     }
 
     handleAddPost = (e) => {
@@ -25,19 +25,23 @@ export default class MyPostsList extends Component {
     .then(response => {
         console.log(response.data)
         this.setState({
-            posts: [response.data, ...this.state.posts]
+            posts: [response.data, ...this.state.posts],
+            showForm: false
         })
     })
 }
 
-
+    handleShowForm = () => {
+        this.setState({
+            showForm: true
+        })
+    }
 
 componentDidMount(){
 
     axios.get(`${config.API_URL}/api/myposts`)
       .then((response) => {
-        console.log(response.data)
-        this.setState({ posts: response.data})
+        this.setState({ posts: response.data })
       })
       .catch(() => {
         console.log('failed to fetch posts')
@@ -59,31 +63,27 @@ componentDidMount(){
 
     render() {
 
-        const { posts } = this.state
+        const { posts, showForm } = this.state
         return (
                 
             <div className="posts">
+
                 <div className="sub-header">
-                <ModalComponent 
-                            btnTitle="add post" 
-                            btnStyle="primary green" 
-                            modalHeading="Add Post"
-                            modalBody={<AddPostForm onAdd={this.handleAddPost}/>}    
-                />
+                {
+                    showForm ? <AddPostForm onAdd={this.handleAddPost} / > : <Button onClick={this.handleShowForm}>Add Post</Button>
+
+                }
+
                 </div>
-            
                 {
                     posts.map((item, i) => {
                         return <PostItem 
+                        id={item._id}
                         title={item.title}
                         content={item.content} />
                     })
 
                 }
-                <div className="posts">
-                    <PostItem title="hello" description="this is a post" />
-         
-                </div>
             </div>
      
         )
