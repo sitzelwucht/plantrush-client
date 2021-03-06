@@ -1,16 +1,28 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import config from '../config'
- 
-export default class Home extends Component {
+import Clock from './Clock'
 
+
+
+export default class Home extends Component {
 
 
     state = {
       loggedinUser: null,
-      time: new Date()
+      fact: null,
+      isLoading: false
     }
 
+    //TODO fix null
+    getRandomFact = () => {
+      this.setState({isLoading: true})
+      axios.get('https://uselessfacts.jsph.pl/random.json?language=en')
+      .then(response => {
+          this.setState({fact: response.data, isLoading: false})
+      })
+      .catch(err => console.log(err))
+    }
 
     componentDidMount(){
         if (!this.props.user) {
@@ -25,7 +37,8 @@ export default class Home extends Component {
               console.log(err)
             
             })
-        }  
+        }
+        this.getRandomFact()
       }
 
 
@@ -43,24 +56,28 @@ export default class Home extends Component {
               console.log(err)
             })
         }  
+        
       }
     
 
     render() {
-        // const { loggedInUser } = this.state
-        // console.log('state ' + loggedInUser.email)
         
-        const { user, time } = this.props
-        console.log(time)
-              return (
-          
+        const { user, fact, isLoading } = this.props
+        
+
+        if (isLoading) {
+          return <div>Loading...</div>
+      }
+      
+        return (
               <div>
                 <div className="content-box">
-                { user ? <div>Welcome to your home page {user.email} </div> : 'Please log in to use this site because currently you\'re null' }
+                { user ? <div className="welcome"><div>Welcome to your home page <span>{user.email}</span></div> 
+                <Clock /> </div>: 'Please log in to use this site because currently you\'re null' }
             
                 </div>
- 
-              </div>
+                { fact && <div>{fact.text}</div> }
+                </div>
         )
 
 

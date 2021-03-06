@@ -1,8 +1,6 @@
 
 
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
 
@@ -25,7 +23,6 @@
   backdrop-filter: blur(5px);
   z-index: 10;
 }
-
 h2 {
   width: 200px;
   margin: 100px auto;
@@ -40,7 +37,6 @@ h2 {
   display: flex;
   justify-content: center;
 }
-
 .intro-btns button {
   margin: 40px;
   border: none;
@@ -53,11 +49,9 @@ h2 {
 .green {
   background: rgb(81, 136, 115)!important;
 }
-
 .darkgreen {
   background: rgba(107, 64, 57, 0.692)!important;
 }
-
 .light {
   color: white
 }
@@ -141,12 +135,21 @@ h2 {
 
 .content-box {
   background: rgb(180, 207, 182);
-  width: 45%;
+  width: 50%;
   margin: 150px auto;
   padding: 30px;
   position: static;
+  font-size: 20px;
 }
 
+.welcome {
+  display: flex;
+  justify-content: space-between;
+}
+
+.welcome span {
+  font-weight: bold
+}
 /* USER PAGE */ 
 
 .my-page {
@@ -216,18 +219,13 @@ h2 {
 .nav-item.nav-link.active {
   background-color: rgb(136, 172, 136);
 }
-
-
 .btn {
   border: none!important;
   outline: none!important;
 }
-
-
 .list-item {
   margin: 25px 0;
 }
-
 .item-row {
   display: flex;
   width: 100%;
@@ -266,15 +264,12 @@ h5 {
   padding: 20px;
   max-width: 40%;
   margin-left: 600px;
-  /* background: rgb(218, 218, 218); */
 }
 
 
 /* plant list */
 
 .plants {
-
-
   overflow-y: scroll; 
 }
 .plant-container {
@@ -295,9 +290,7 @@ h5 {
   padding: 20px;
   max-width: 55%;
   margin-left: 600px;
-  height: 100vh;
 }
-
 .detail-header {
   border-bottom: 1px dashed rgb(58, 58, 58);
   color: rgb(58, 58, 58);
@@ -307,19 +300,16 @@ h5 {
   display: flex;
   justify-content: space-between;
 }
-
 .detail-box p {
   margin: 50px;
   line-height: 1.4em;
 }
-
 .posted {
   text-align: right;
   font-size: 30px;
   margin: 10px;
   color: rgb(151, 151, 151)
 }
-
 .btns {
   text-align: center;
 }
@@ -327,7 +317,6 @@ h5 {
   margin: 0 30px;
   background: rgb(224, 224, 224);
 }
-
 .btns button:hover {
   background: rgb(184, 184, 184)!important
 }
@@ -337,18 +326,14 @@ h5 {
   padding: 30px;
   margin: auto;
 }
-
-
 .comment-section {
   margin: 50px auto;
   width: 60%;
 }
-
 .comment-container {
   margin-top: 50px;
   background: rgb(204, 204, 204);
 }
-
 .comment-container * {
   margin: 5px;
   padding: 10px;
@@ -357,12 +342,10 @@ h5 {
   font-family: 'comfortaa';
   font-size: 20px;
 }
-
 .comment-time {
   font-size: 15px;
   color: grey;
 }
-
 .comment-content {
   margin-top: 10px;
 }
@@ -375,12 +358,10 @@ h5 {
   justify-content: space-evenly;
   align-items: center;
 }
-
 .plant-details span {
   background: rgb(202, 202, 202);
   color: rgb(44, 44, 44);
   padding: 5px;
-
 }
 .plant-item {
   border: solid green 1px;
@@ -390,7 +371,6 @@ h5 {
   padding: 5px 20px;
   position: relative;
 }
-
 .read-more-btn {
   position: absolute;
   bottom: 0;
@@ -405,7 +385,6 @@ h5 {
 .added {
   color: grey
 }
-
 
 /* search results */
 
@@ -426,12 +405,10 @@ h5 {
 {
   border-radius: 10px;
 }
-
 ::-webkit-scrollbar
 {
   width: 12px;
 }
-
 ::-webkit-scrollbar-thumb
 {
   border-radius: 10px;

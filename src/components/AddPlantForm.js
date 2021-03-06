@@ -78,7 +78,7 @@ export default class AddPlantForm extends Component {
                 </Form>
 
                 <div className="plant-image">
-                { !isLoading ? <Image style={{width: '450px'}} cloudName="plantrush" publicId={cloudinaryId}/> : <Loader />} 
+                { !isLoading ? <Image style={{height: '450px'}} cloudName="plantrush" publicId={cloudinaryId}/> : <Loader />} 
                 </div>
             </div>
         )

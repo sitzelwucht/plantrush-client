@@ -61,7 +61,7 @@ export default class AddPostForm extends Component {
 
             <div className="plant-image">
 
-            { !isLoading ? <Image style={{width: '450px'}} cloudName="plantrush" publicId={cloudinaryId}/> : <Loader />} 
+            { !isLoading ? <Image style={{height: '450px'}} cloudName="plantrush" publicId={cloudinaryId}/> : <Loader />} 
                
                 </div>
             

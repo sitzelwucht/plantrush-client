@@ -104,9 +104,7 @@ User can upload images of their houseplants, get information about their plant, 
 #### Git
 
 
-Stuff goes here
-
-[Repository - client](https://github.com/sitzelwucht/plantrush-client)
-[Repository - server](https://github.com/sitzelwucht/plantrush-server)
+- [Repository - client](https://github.com/sitzelwucht/plantrush-client)
+- [Repository - server](https://github.com/sitzelwucht/plantrush-server)
 
 #### Slides
