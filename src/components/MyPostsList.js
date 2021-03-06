@@ -10,7 +10,8 @@ export default class MyPostsList extends Component {
 
     state = {
         posts: [],
-        showForm: false
+        showForm: false,
+        loggedInUser: null
     }
 
     handleAddPost = (e) => {
@@ -18,11 +19,13 @@ export default class MyPostsList extends Component {
         let title = e.target.title.value
         let content = e.target.content.value
         let imageurl = e.target.imageurl.value
-
+        let author = this.state.loggedInUser
+        
     axios.post(`${config.API_URL}/api/create-post`, {
         title: title,
         content: content,
-        imageurl: imageurl
+        imageurl: imageurl,
+        author: author
     })
     .then(response => {
         console.log(response.data)
@@ -83,7 +86,8 @@ componentDidMount(){
                         id={item._id}
                         title={item.title}
                         content={item.content}
-                        imageurl={item.imageurl} />
+                        imageurl={item.imageurl}
+                        author={item.author} />
                     })
 
                 }

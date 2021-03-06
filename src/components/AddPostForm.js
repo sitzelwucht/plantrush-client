@@ -3,8 +3,10 @@ import { Form, Button } from 'react-bootstrap'
 import axios from 'axios'
 import { Image } from 'cloudinary-react'
 
-
 export default class AddPostForm extends Component {
+
+
+
 
 
     state = {
@@ -22,7 +24,6 @@ export default class AddPostForm extends Component {
             this.setState({ cloudinaryId: response.data.public_id, imageUrl: response.data.url})
         })
     }
-
 
 
     render() {

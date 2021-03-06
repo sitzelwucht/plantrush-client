@@ -48,9 +48,9 @@ export default class SearchPlants extends Component {
       // }
     }
 
-    componentDidUpdate() {
-      this.getPlantData()
-    }
+    // componentDidUpdate() {
+    //   this.getPlantData()
+    // }
 
     render() {
         const { filteredPlants, msg } = this.state

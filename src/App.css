@@ -154,13 +154,9 @@ h2 {
 .my-page-container {
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 60%;
   margin-top: 30px;
-  margin-left: 500px;
-  min-width: 70%;
-  max-width: 70%;
-  max-height: 750px;
-  overflow-y: scroll;
+  margin-left: 550px;
 
 }
 .my-page-header {
@@ -227,7 +223,6 @@ h2 {
   display: flex;
   width: 100%;
   color: rgba(20,20,20,.7);
-
 }
 
 .factfile {
@@ -262,7 +257,7 @@ h5 {
   padding: 20px;
   max-width: 40%;
   margin-left: 600px;
-  background: rgb(218, 218, 218);
+  /* background: rgb(218, 218, 218); */
 }
 
 
@@ -271,6 +266,14 @@ h5 {
 .plants {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
+  max-height: 600px;
+  overflow-y: scroll; 
+}
+
+.posts {
+  max-height: 700px;
+  overflow-y: scroll; 
 }
 
 /* DETAILS PAGES */
@@ -323,6 +326,34 @@ h5 {
   margin: auto;
 }
 
+
+.comment-section {
+  margin: 50px auto;
+  width: 60%;
+}
+
+.comment-container {
+  margin-top: 50px;
+  background: rgb(204, 204, 204);
+}
+
+.comment-container * {
+  margin: 5px;
+  padding: 10px;
+}
+.comment-title {
+  font-family: 'comfortaa';
+  font-size: 20px;
+}
+
+.comment-time {
+  font-size: 15px;
+  color: grey;
+}
+
+.comment-content {
+  margin-top: 10px;
+}
 /* plant details */
 
 .plant-details {
@@ -330,6 +361,7 @@ h5 {
   padding: 15px;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
 }
 
 .plant-details span {
@@ -340,12 +372,18 @@ h5 {
 }
 .plant-item {
   border: solid green 1px;
-  max-width: 350px;
-  min-width: 350px;
+  max-width: 325px;
+  min-width: 325px;
   margin: 12px;
   padding: 5px 20px;
+  position: relative;
 }
 
+.read-more-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
 .plant-image {
   margin: 20px
 }
@@ -356,6 +394,20 @@ h5 {
   color: grey
 }
 
+
+/* search results */
+
+.post-box {
+  margin: 50px auto;
+  border-bottom: 1px solid grey
+}
+.post-title {
+  font-family: 'comfortaa';
+}
+.post-title a {
+  color: rgb(190, 82, 82);
+  font-weight: bold;
+}
 /* scrollbar */
 
 ::-webkit-scrollbar-track
