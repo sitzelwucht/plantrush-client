@@ -12,7 +12,6 @@ export default class EditPlantForm extends Component {
 
     componentDidMount() {
         let plantid = this.props.plantid
-        console.log(this.props)
         axios.get(`${config.API_URL}/api/myplants/${plantid}`)
         .then(response => {
             this.setState({
@@ -66,25 +65,23 @@ export default class EditPlantForm extends Component {
     }
 
 
-    //TODO 
     handleEditPlant = (plant) => {
         axios.patch(`${config.API_URL}/api/myplants/${this.props.plantid}`, {
             name: plant.name,
             description: plant.description,
             watering: plant.watering,
-            light: plant.lght
+            light: plant.light
         })
         .then(() => {
-            let plantsUpdated = this.state.plants
+            this.props.history.push('/mypage')
         })
+
     } 
 
     render() {
 
         const { plant } = this.state
-        const { onEdit } = this.props
 
-        console.log(plant.watering)
         return (
             <div className="edit-form">
                 <Form>
@@ -117,7 +114,7 @@ export default class EditPlantForm extends Component {
                 </Form.Group>
 
             
-                <Button onClick={() => onEdit(plant) } variant="dark" type="submit">
+                <Button onClick={() => this.handleEditPlant(plant) } variant="dark" type="submit">
                     Submit
                 </Button>
                 </Form>

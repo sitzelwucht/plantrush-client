@@ -60,7 +60,7 @@ class PlantDetail extends Component {
                     </div>
                 </div>
 
-                { showForm && <EditPlantForm plantid={plant._id}/> } 
+                { showForm && <EditPlantForm plantid={plant._id} /> } 
 
                 <div className="plant-details">
                     <div className="added">Added: {Moment(plant.added).format(' DD MMM yyyy')} </div>

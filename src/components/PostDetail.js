@@ -59,7 +59,7 @@ class PostDetail extends Component {
                     </div>
            
                 </div>
-                { showForm && <EditPostForm /> } 
+                { showForm && <EditPostForm postid={post._id} /> } 
                 <div className="posted">{Moment(post.created).format('dddd DD MMM yyyy')} </div>
 
                 <p>{post.content}</p>

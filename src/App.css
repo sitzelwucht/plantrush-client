@@ -130,10 +130,7 @@ h2 {
 .logoutBtn {
   margin: 0 30px;
 }
-/* .forms {
-  width: 75%;
-  margin: auto;
-} */
+
 
 /* home page */
 
@@ -153,7 +150,7 @@ h2 {
 .my-page-container {
   display: flex;
   justify-content: space-between;
-  width: 70%;
+  width: 80%;
   margin-top: 30px;
   margin-left: 500px;
   min-width: 70%;
@@ -179,7 +176,13 @@ h2 {
   justify-content: space-between;
   padding: 20px;
   border-radius: 7px;
-  color: rgb(155, 155, 155);
+  color: rgb(138, 138, 138);
+}
+.sub-header form {
+  width: 500px;
+  margin: auto!important;
+  padding: 15px;
+  background: rgb(226, 226, 226);
 }
 
 .sub-header button:hover  {
@@ -319,7 +322,6 @@ h5 {
 /* plant details */
 
 .plant-details {
-  border: 1px solid blue;
   font-size: 20px;
   padding: 15px;
 }
@@ -332,8 +334,11 @@ h5 {
 .plant-item {
   border: solid green 1px;
   max-width: 350px;
-  margin: 20px;
+  margin: 12px;
+  padding: 5px 20px;
 }
+
+
 /* scrollbar */
 
 ::-webkit-scrollbar-track
