@@ -36,7 +36,7 @@ export default class ModalComponent extends Component {
               <Modal.Body>
               
               {this.props.modalBody}
-              
+              <Modal.Footer><span clasName="error">{this.props.msg}</span></Modal.Footer>
               </Modal.Body>
             </Modal>
             </div>

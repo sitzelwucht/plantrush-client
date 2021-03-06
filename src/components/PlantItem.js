@@ -9,12 +9,9 @@ export default class PlantItem extends Component {
             <div className="list-item">
               <Link to={`/plant/${this.props.id}`}><h5>{this.props.name}</h5> </Link>
                <div className="item-row">
-                        <div><img src="https://picsum.photos/150" alt=""/></div>
+                        <div><img src={this.props.imageurl} height="75" alt=""/></div>
                         <div className="factfile">
-                            <div><span>Species:</span>{this.props.name}</div>
-                            <div><span>Light:</span> {this.props.light}</div>
-                            <div><span>Watering:</span> {this.props.watering}</div>
-                            <div>{this.props.description}</div>
+                            <div>{this.props.description.slice(0, 75)}...</div>
                             <Link to={`/plant/${this.props.id}`}><Button variant="light">more</Button></Link>
                         </div>
                         

@@ -40,7 +40,7 @@ class App extends Component {
     })
     .catch(err => {
       this.setState({
-        error: err.response.data
+        error: 'email address already registered'
       })
     })
   }
@@ -61,7 +61,10 @@ class App extends Component {
         this.props.history.push('/home')
       })
     })
-    .catch(err => console.log('something went wrong while logging in', err))
+    .catch(err => {
+      this.setState({error: 'invalid email or password'})
+      console.log('something went wrong while logging in', err)
+    })
   }
 
 
@@ -105,7 +108,7 @@ class App extends Component {
       <Switch>
 
         <Route exact path="/" render={() => {
-          return <Landing onSignup={this.handleSignup} onLogin={this.handleLogin}/>
+          return <Landing onSignup={this.handleSignup} onLogin={this.handleLogin} msg={error} />
           }
         } />
 

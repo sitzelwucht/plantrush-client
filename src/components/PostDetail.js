@@ -61,7 +61,7 @@ class PostDetail extends Component {
                 </div>
                 { showForm && <EditPostForm postid={post._id} /> } 
                 <div className="posted">{Moment(post.created).format('dddd DD MMM yyyy')} </div>
-
+                { post.imageurl && <img src={post.imageurl} height="300" alt="" /> } 
                 <p>{post.content}</p>
             </div>
         )

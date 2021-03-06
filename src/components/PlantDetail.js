@@ -63,9 +63,14 @@ class PlantDetail extends Component {
                 { showForm && <EditPlantForm plantid={plant._id} /> } 
 
                 <div className="plant-details">
-                    <div className="added">Added: {Moment(plant.added).format(' DD MMM yyyy')} </div>
-                    <div className="watering">Watering: <span>{plant.watering} </span></div>
-                    <div className="lighting">Light: <span>{plant.light}</span> </div>
+                    <div className="facts">
+                        <div className="watering">Watering: <span>{plant.watering} </span></div>
+                        <div className="lighting">Light: <span>{plant.light}</span> </div>
+                        <div className="added">Added: {Moment(plant.added).format(' DD MMM yyyy')} </div>
+                    </div>
+                    <img src={plant.imageurl} height="400" alt="" />
+              
+
                 </div>
                 
                 <p>{plant.description}</p>

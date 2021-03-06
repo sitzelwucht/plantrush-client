@@ -62,6 +62,10 @@ h2 {
   color: white
 }
 
+.error {
+  color: red
+}
+
 /* navbar */
 
 .greenrush {
@@ -324,20 +328,33 @@ h5 {
 .plant-details {
   font-size: 20px;
   padding: 15px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .plant-details span {
   background: rgb(202, 202, 202);
   color: rgb(44, 44, 44);
   padding: 5px;
+
 }
 .plant-item {
   border: solid green 1px;
   max-width: 350px;
+  min-width: 350px;
   margin: 12px;
   padding: 5px 20px;
 }
 
+.plant-image {
+  margin: 20px
+}
+.facts {
+  line-height: 2em;
+}
+.added {
+  color: grey
+}
 
 /* scrollbar */
 

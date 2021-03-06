@@ -17,10 +17,12 @@ export default class MyPostsList extends Component {
         e.preventDefault()
         let title = e.target.title.value
         let content = e.target.content.value
+        let imageurl = e.target.imageurl.value
 
     axios.post(`${config.API_URL}/api/create-post`, {
         title: title,
         content: content,
+        imageurl: imageurl
     })
     .then(response => {
         console.log(response.data)
@@ -80,7 +82,8 @@ componentDidMount(){
                         return <PostItem 
                         id={item._id}
                         title={item.title}
-                        content={item.content} />
+                        content={item.content}
+                        imageurl={item.imageurl} />
                     })
 
                 }

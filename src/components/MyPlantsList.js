@@ -20,12 +20,14 @@ export default class MyPlantsList extends Component {
         let description = e.target.description.value
         let watering = e.target.watering.value
         let light = e.target.light.value
+        let imageurl = e.target.imageurl.value
 
     axios.post(`${config.API_URL}/api/add-plant`, {
         name: name,
         description: description,
         watering: watering,
-        light: light
+        light: light,
+        imageurl: imageurl
     })
     .then(response => {
         this.setState({
@@ -82,6 +84,7 @@ componentDidMount(){
                         plants.map((item, i) => {
                             return <div className="plant-item"><PlantItem 
                                     id={item._id}
+                                    imageurl={item.imageurl}
                                     name={item.name} 
                                     description={item.description} 
                                     watering={item.watering} 
