@@ -14,7 +14,7 @@ class PostDetail extends Component {
     state = {
         post: {},
         showForm: false,
-        loading: true,
+        isLoading: true,
         comments: [],
         showCommentForm: false,
         loggedInUser: null
@@ -73,7 +73,8 @@ class PostDetail extends Component {
             axios.get(`${config.API_URL}/api/user`, { withCredentials: true })
             .then((response) => {
                 this.setState({
-                    loggedInUser: response.data
+                    loggedInUser: response.data,
+                    isLoading: false
                 })
             })
                 .catch(err => {
@@ -85,6 +86,7 @@ class PostDetail extends Component {
         .then(response => {
             this.setState({
                 post: response.data,
+                isLoading: false
             })
         })
         .catch(err => console.log(err))
@@ -93,7 +95,7 @@ class PostDetail extends Component {
 
         axios.get(`${config.API_URL}/api/comments/${this.props.postid}`)
         .then((response) => {
-            this.setState({ comments: response.data })
+            this.setState({ comments: response.data, isLoading: false })
             })
         .catch(() => {
             console.log('failed to fetch comments')
@@ -106,8 +108,12 @@ class PostDetail extends Component {
 
 
     render() {
+  
+        const { post, showForm, showCommentForm, comments, loggedInUser, isLoading } = this.state
 
-        const { post, showForm, showCommentForm, comments } = this.state
+        if (isLoading) {
+            return <div>Loading...</div>
+        }
 
         Moment.locale('en');
         return (
@@ -115,10 +121,14 @@ class PostDetail extends Component {
             <div className="detail-box">
                 <div className="detail-header">
                     <div>{post.title} </div>
+                    
+                  { post.author === loggedInUser._id &&
                     <div className="btns">
                         <Button variant="light" onClick={this.handleShowForm}>edit</Button>
                         <Button variant="light" onClick={this.handleDelete}>delete</Button>
                     </div>
+                  }
+                  
            
                 </div>
                 { showForm && <EditPostForm postid={post._id} /> } 

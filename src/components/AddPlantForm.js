@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Form, Button } from 'react-bootstrap'
 import axios from 'axios'
 import { Image } from 'cloudinary-react'
-
+import Loader from './Loader'
 
 
 export default class AddPlantForm extends Component {
@@ -10,21 +10,29 @@ export default class AddPlantForm extends Component {
 
     state = {
         cloudinaryId: null,
-        imageUrl: null
+        imageUrl: null,
+        isLoading: null
     }
 
 
     uploadImage = (files) => {
+        this.setState({ isLoading: true })
         const formData = new FormData()
         formData.append('file', files[0])
         formData.append('upload_preset', 'y7dfvtyb')
         axios.post('https://api.cloudinary.com/v1_1/plantrush/image/upload', formData)
         .then(response => {
-            this.setState({ cloudinaryId: response.data.public_id, imageUrl: response.data.url})
+            this.setState({ 
+                cloudinaryId: response.data.public_id, 
+                imageUrl: response.data.url,
+                isLoading: false
+            })
         })
     }
 
     render() {
+        const { isLoading, imageUrl, cloudinaryId } = this.state
+
         return (
             <div className="row">
                 <Form onSubmit={this.props.onAdd}>
@@ -37,7 +45,7 @@ export default class AddPlantForm extends Component {
                 
                 <Form.Group controlId="formBasicEmail">
                     <Form.Label>Image url</Form.Label>
-                    <Form.Control name="imageurl" type="text" value={this.state.imageUrl} />
+                    <Form.Control name="imageurl" type="text" value={imageUrl} />
                 </Form.Group>
 
                 <Form.Group controlId="exampleForm.ControlTextarea1">
@@ -70,7 +78,7 @@ export default class AddPlantForm extends Component {
                 </Form>
 
                 <div className="plant-image">
-                <Image style={{width: '450px'}} cloudName="plantrush" publicId={this.state.cloudinaryId}/>
+                { !isLoading ? <Image style={{width: '450px'}} cloudName="plantrush" publicId={cloudinaryId}/> : <Loader />} 
                 </div>
             </div>
         )

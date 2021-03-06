@@ -12,12 +12,14 @@ User can upload images of their houseplants, get information about their plant, 
 - home - after logging in, show nav bar with user menu and search option 
 - navbar - navbar can be accessed only after login, then it can be used to navigate to different parts of the page or logging out
 - profile - User will be able to edit their information, see their plants and posts
-- plants - user will get a summary of the plants they entered in the system
-- posts - user will get a summary of the posts they have made
+- myplants - user will get a summary of the plants they entered in the system
+- myposts - user will get a summary of the posts they have made
+- post-search - user can search all posts containing key words
 
 ## Backlog
 
-- something will be here very soon
+- implement external API search
+- expand on different types of interaction between users
 
 ## Routes
 
@@ -104,7 +106,7 @@ User can upload images of their houseplants, get information about their plant, 
 
 Stuff goes here
 
-
-[Repository](url)
+[Repository - client](https://github.com/sitzelwucht/plantrush-client)
+[Repository - server](https://github.com/sitzelwucht/plantrush-server)
 
 #### Slides

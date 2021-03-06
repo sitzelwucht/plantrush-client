@@ -67,19 +67,19 @@ componentDidMount(){
   }
 
     render() {
+
      const { plants, showForm } = this.state
 
         return ( 
-                <div>
+                <div className="plants">
                     <div className="sub-header">
-
             {
                 showForm ? <AddPlantForm onAdd={this.handleAddPlant}/> : <Button onClick={this.handleShowForm} >Add Plant </Button>
             }
 
                     </div>
-                    
-                    <div className="plants">
+                    <div className="plant-container">
+               
                      {
                         plants.map((item, i) => {
                             return <div className="plant-item"><PlantItem 
@@ -92,7 +92,7 @@ componentDidMount(){
                                     </div>
                          })
                      }   
-                    </div>
+                     </div>
                 </div>
     
                 )

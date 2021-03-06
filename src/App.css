@@ -62,9 +62,6 @@ h2 {
   color: white
 }
 
-.error {
-  color: red
-}
 
 /* navbar */
 
@@ -89,11 +86,9 @@ h2 {
 }
 
 .menu a:hover {
-  background: rgba(220,220,220,.5);
   border-radius: 5px;
   text-decoration: none;
   color: rgb(20,20,20)
-
 }
 .brand {
   font-family: 'Berkshire Swash';
@@ -102,16 +97,22 @@ h2 {
   padding: 0;
   color: white;
 }
+.brand:hover {
+  background: rgba(0,0,0,0);
+}
 
 .nav-top {
   margin: 0;
   text-align: center;
 }
-
 .nav-link {
   display: flex;
   flex-direction: column;
   text-align: right;
+  font-family: 'comfortaa'
+}
+.nav-link a:hover {
+    background: rgba(220,220,220,.5);
 }
 .nav-bottom {
   padding: 30px;
@@ -186,12 +187,20 @@ h2 {
 }
 
 .sub-header button:hover  {
-  background: rgb(145, 18, 92);
+  background: rgb(83, 20, 57);
 }
 
 .sub-header button{
   background: grey;
 }
+
+.form-img {
+  display: flex;
+}
+.spinner {
+  margin: 150px;
+}
+
 .tab a {
   font-size: 35px;
   color: rgb(109, 163, 151);
@@ -264,13 +273,16 @@ h5 {
 /* plant list */
 
 .plants {
+
+
+  overflow-y: scroll; 
+}
+.plant-container {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   max-height: 600px;
-  overflow-y: scroll; 
 }
-
 .posts {
   max-height: 700px;
   overflow-y: scroll; 
