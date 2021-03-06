@@ -136,7 +136,7 @@ h2 {
 .content-box {
   background: rgb(180, 207, 182);
   width: 50%;
-  margin: 150px auto;
+  margin: 150px 600px;
   padding: 30px;
   position: static;
   font-size: 20px;
@@ -149,6 +149,19 @@ h2 {
 
 .welcome span {
   font-weight: bold
+}
+
+.random {
+  text-align: center;
+  margin: 30px;
+}
+.fact {
+  width: 40%;
+  font-size: 16px;
+  margin: 20px auto;
+  padding: 10px;
+  background: rgb(152, 173, 152);
+  border-radius: 5px;
 }
 /* USER PAGE */ 
 

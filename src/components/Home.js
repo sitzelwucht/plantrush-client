@@ -61,9 +61,9 @@ export default class Home extends Component {
     
 
     render() {
-        
-        const { user, fact, isLoading } = this.props
-        
+
+      const { user } = this.props
+      const { fact, isLoading } = this.state
 
         if (isLoading) {
           return <div>Loading...</div>
@@ -74,10 +74,13 @@ export default class Home extends Component {
                 <div className="content-box">
                 { user ? <div className="welcome"><div>Welcome to your home page <span>{user.email}</span></div> 
                 <Clock /> </div>: 'Please log in to use this site because currently you\'re null' }
+                
+                <div className="random">Random fact:
+                { fact && <div className="fact">{fact.text}</div> }
+                </div>
+                </div>
             
-                </div>
-                { fact && <div>{fact.text}</div> }
-                </div>
+              </div>
         )
 
 
