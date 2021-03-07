@@ -84,7 +84,7 @@ componentDidMount(){
                 <div className="plants">
                     <div className="sub-header">
             {
-                showForm ? <AddPlantForm onAdd={this.handleAddPlant}/> : <Button onClick={this.handleShowForm} >Add Plant </Button>
+                showForm ? <AddPlantForm onAdd={this.handleAddPlant}/> : <Button onClick={this.handleShowForm} > + Add Plant </Button>
             }
 
                     </div>

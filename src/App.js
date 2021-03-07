@@ -13,6 +13,8 @@ import SearchPlants from './components/SearchPlants'
 import SearchPosts from './components/SearchPosts'
 import PostDetail from './components/PostDetail'
 import PlantDetail from './components/PlantDetail'
+import NotFound from './components/NotFound'
+
 
 class App extends Component {
 
@@ -28,19 +30,19 @@ class App extends Component {
     let newUser = {
       email: e.target.email.value,
       password: e.target.password.value,
-      password2: e.target.password.value
+      password2: e.target.password2.value
     }
     axios.post(`${config.API_URL}/api/signup`, newUser)
     .then(response => {
       this.setState({
-        loggedInUser : response.data
+        loggedInUser: response.data
       }, () => {
         this.props.history.push('/home')
       })
     })
     .catch(err => {
       this.setState({
-        error: 'email address already registered'
+         error: Object.values(err.response.data)[0]
       })
     })
   }
@@ -62,11 +64,9 @@ class App extends Component {
       })
     })
     .catch(err => {
-      this.setState({error: 'invalid email or password'})
-      console.log('something went wrong while logging in', err)
+      this.setState({error: Object.values(err.response.data)[0]})
     })
   }
-
 
 
   handleLogout = () => {
@@ -79,8 +79,6 @@ class App extends Component {
       })
     })
   }
-
-
 
 
   componentDidMount(){
@@ -97,7 +95,6 @@ class App extends Component {
 
 
 
-
   render() {
     const { loggedInUser, error  } = this.state
 
@@ -105,13 +102,13 @@ class App extends Component {
 
       <div>
       <NavBar onLogout={this.handleLogout} user={loggedInUser}/>
+
       <Switch>
 
         <Route exact path="/" render={() => {
           return <Landing onSignup={this.handleSignup} onLogin={this.handleLogin} msg={error} />
           }
         } />
-
 
         <Route path="/home" render={(routeProps) => {
           return <Home user={loggedInUser} />
@@ -137,6 +134,8 @@ class App extends Component {
           return <PlantDetail user={loggedInUser} plantid={routeProps.match.params.plantid} />
         }} />
 
+        <Route component={NotFound} />
+        
         </Switch>
       </div>
     )

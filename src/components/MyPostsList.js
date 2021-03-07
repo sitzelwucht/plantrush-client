@@ -78,7 +78,7 @@ componentDidMount(){
 
                 <div className="sub-header">
                 {
-                    showForm ? <AddPostForm onAdd={this.handleAddPost} / > : <Button onClick={this.handleShowForm}>Add Post</Button>
+                    showForm ? <AddPostForm onAdd={this.handleAddPost} / > : <Button onClick={this.handleShowForm}>+ Add Post</Button>
 
                 }
 
