@@ -11,23 +11,28 @@ export default class MyPlantsList extends Component {
 
     state = {
         plants: [],
-        showForm: false
+        showForm: false,
+        loggedInUser: null
     }
 
     handleAddPlant = (e) => {
         e.preventDefault()
         let name = e.target.name.value
+        let sciName = e.target.sciName.value
         let description = e.target.description.value
         let watering = e.target.watering.value
         let light = e.target.light.value
         let imageurl = e.target.imageurl.value
+        
 
     axios.post(`${config.API_URL}/api/add-plant`, {
         name: name,
+        scientific_name: sciName,
         description: description,
         watering: watering,
         light: light,
-        imageurl: imageurl
+        imageurl: imageurl,
+        added_by: this.props.user._id
     })
     .then(response => {
         this.setState({
@@ -47,6 +52,7 @@ componentDidMount(){
 
     axios.get(`${config.API_URL}/api/myplants`)
       .then((response) => {
+          
         this.setState({ plants: response.data})
       })
       .catch(() => {
@@ -69,7 +75,7 @@ componentDidMount(){
     render() {
 
      const { plants, showForm } = this.state
-
+    
         return ( 
                 <div className="plants">
                     <div className="sub-header">

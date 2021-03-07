@@ -50,12 +50,14 @@ class PostDetail extends Component {
         let title = e.target.title.value
         let content = e.target.content.value
         let author = this.state.loggedInUser
+        let authorName = this.state.loggedInUser.email
         let post = this.props.postid
         
     axios.post(`${config.API_URL}/api/add-comment`, {
         title: title,
         content: content,
         author: author,
+        authorName: authorName,
         post: post
     })
     .then(response => {
@@ -92,7 +94,7 @@ class PostDetail extends Component {
         .catch(err => console.log(err))
         
 
-
+        // fetch comments with the same post id
         axios.get(`${config.API_URL}/api/comments/${this.props.postid}`)
         .then((response) => {
             this.setState({ comments: response.data, isLoading: false })
@@ -109,7 +111,8 @@ class PostDetail extends Component {
 
     render() {
   
-        const { post, showForm, showCommentForm, comments, loggedInUser, isLoading } = this.state
+        const { post, showForm, showCommentForm, comments, isLoading } = this.state
+        const { user } = this.props
 
         if (isLoading) {
             return <div>Loading...</div>
@@ -122,7 +125,7 @@ class PostDetail extends Component {
                 <div className="detail-header">
                     <div>{post.title} </div>
                     
-                  { post.author === loggedInUser._id &&
+                  { post.author === user._id &&
                     <div className="btns">
                         <Button variant="light" onClick={this.handleShowForm}>edit</Button>
                         <Button variant="light" onClick={this.handleDelete}>delete</Button>
@@ -144,7 +147,7 @@ class PostDetail extends Component {
                 comments.map((item, i) => {
                     return <div key={i} className="comment-container"> 
                     <div className="comment-title">{item.title}</div> 
-                    <div className="comment-time">{Moment(item.time).format('MMMM Do YYYY, h:mm:ss a')}</div> 
+                    <div className="comment-time">{item.authorName}  ||  {Moment(item.time).format('MMMM Do YYYY, h:mm:ss a')}</div> 
                     <div className="comment-content">{item.content} </div>
                     </div>
                 })

@@ -14,7 +14,6 @@ export default class Home extends Component {
       isLoading: false
     }
 
-    //TODO fix null
     getRandomFact = () => {
       this.setState({isLoading: true})
       axios.get('https://uselessfacts.jsph.pl/random.json?language=en')

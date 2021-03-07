@@ -137,7 +137,6 @@ h2 {
   background: rgb(180, 207, 182);
   width: 50%;
   margin: 150px 600px;
-  padding: 30px;
   position: static;
   font-size: 20px;
 }
@@ -145,6 +144,10 @@ h2 {
 .welcome {
   display: flex;
   justify-content: space-between;
+  background: rgba(20,20,20,.4);
+  color: white;
+  margin: 0;
+  padding: 25px;
 }
 
 .welcome span {
@@ -154,6 +157,7 @@ h2 {
 .random {
   text-align: center;
   margin: 30px;
+  padding: 25px;
 }
 .fact {
   width: 40%;
@@ -241,8 +245,10 @@ h2 {
 }
 .item-row {
   display: flex;
-  width: 100%;
+  width: 80%;
   color: rgba(20,20,20,.7);
+  position: relative;
+  margin: auto;
 }
 
 .factfile {
@@ -257,9 +263,9 @@ h2 {
 
 h5 {
   padding: 10px;
-  color: rgba(153, 147, 150, 0.6);
+  color: rgba(92, 87, 89, 0.7);
   border-bottom: 1px solid grey;
-  text-align: right
+  text-align: center
 }
 
 .searchbar {
@@ -299,7 +305,7 @@ h5 {
 /* DETAILS PAGES */
 
 .detail-box {
-  background: rgb(224, 224, 224);
+  background: rgb(238, 238, 238);
   padding: 20px;
   max-width: 55%;
   margin-left: 600px;
@@ -377,7 +383,8 @@ h5 {
   padding: 5px;
 }
 .plant-item {
-  border: solid green 1px;
+  border: solid rgb(174, 194, 174) 1px;
+  background: rgb(212, 238, 212);
   max-width: 325px;
   min-width: 325px;
   margin: 12px;

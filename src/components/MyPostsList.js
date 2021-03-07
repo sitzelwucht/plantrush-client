@@ -20,12 +20,14 @@ export default class MyPostsList extends Component {
         let content = e.target.content.value
         let imageurl = e.target.imageurl.value
         let author = this.state.loggedInUser
+        let authorName = this.state.loggedInUser.email
         
     axios.post(`${config.API_URL}/api/create-post`, {
         title: title,
         content: content,
         imageurl: imageurl,
-        author: author
+        author: author,
+        authorName: authorName
     })
     .then(response => {
         console.log(response.data)
@@ -44,7 +46,7 @@ export default class MyPostsList extends Component {
 
 componentDidMount(){
 
-    axios.get(`${config.API_URL}/api/myposts`)
+    axios.get(`${config.API_URL}/api/myposts/`)
       .then((response) => {
         this.setState({ posts: response.data })
       })
@@ -69,6 +71,7 @@ componentDidMount(){
     render() {
 
         const { posts, showForm } = this.state
+
         return (
                 
             <div className="posts">
@@ -87,7 +90,7 @@ componentDidMount(){
                         title={item.title}
                         content={item.content}
                         imageurl={item.imageurl}
-                        author={item.author} />
+                        author={item.authorName} />
                     })
 
                 }

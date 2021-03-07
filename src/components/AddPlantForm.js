@@ -41,6 +41,13 @@ export default class AddPlantForm extends Component {
                     <Form.Control name="name" type="text" placeholder="Enter name" />
 
                 </Form.Group>
+
+                <Form.Group controlId="formBasicEmail">
+                    <Form.Label>Scientific name</Form.Label>
+                    <Form.Control name="sciName" type="text" placeholder="Enter name" />
+
+                </Form.Group>
+
                 <Form.Control type="file" onChange={(e) => {this.uploadImage(e.target.files)}}/>
                 
                 <Form.Group controlId="formBasicEmail">
