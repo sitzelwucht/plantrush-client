@@ -10,13 +10,14 @@ export default class PostItem extends Component {
 
         return (
             <div className="list-item">
-               <Link to={`/post/${this.props.id}`}><h5>{this.props.title}</h5> </Link>
+               <Link to={`/post/${this.props.id}`}><h5>{this.props.title}  <span className="post-author"><img src="images/user1.svg" height="20" alt="" />{this.props.author}</span></h5> </Link>
                <div className="item-row">
                         <div><img src={this.props.imageurl} height="250" alt=""/></div>
                         <div className="factfile">
+                           
                             <div>{this.props.content}</div>
-                            by <span>{this.props.author}</span>
-                       <Link to={`/post/${this.props.id}`}><Button variant="dark" className="read-more-btn">more</Button></Link>
+                          
+                       <div><Link to={`/post/${this.props.id}`}><Button variant="light" className="read-more-btn">more</Button></Link></div>
                         </div>
                         
                </div>

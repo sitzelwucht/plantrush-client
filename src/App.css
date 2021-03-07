@@ -56,7 +56,6 @@ h2 {
   color: white
 }
 
-
 /* navbar */
 
 .greenrush {
@@ -241,16 +240,38 @@ h2 {
   outline: none!important;
 }
 .list-item {
-  margin: 25px 0;
+  margin: 25px 20px;
+  padding: 20px;
+  background: rgb(240, 240, 240)
+}
+.list-item a:hover {
+  text-decoration: none;
 }
 .item-row {
   display: flex;
-  width: 80%;
+  width: 95%;
   color: rgba(20,20,20,.7);
   position: relative;
   margin: auto;
 }
+h5 {
+  padding: 10px;
+  color: rgba(92, 87, 89, 0.7);
+  border-bottom: 1px solid grey;
+  display: flex;
+  justify-content: space-between;
+}
 
+.post-author {
+
+  font-weight: 300!important;
+  font-size: 15px;
+  margin: 5px;
+  letter-spacing: .02em;
+}
+.post-author img {
+  margin: 0 5px;
+}
 .factfile {
   margin: 10px;
   display: flex;
@@ -261,12 +282,6 @@ h2 {
   font-weight: bold;
 }
 
-h5 {
-  padding: 10px;
-  color: rgba(92, 87, 89, 0.7);
-  border-bottom: 1px solid grey;
-  text-align: center
-}
 
 .searchbar {
   margin: 150px auto;
@@ -383,24 +398,29 @@ h5 {
   padding: 5px;
 }
 .plant-item {
-  border: solid rgb(174, 194, 174) 1px;
-  background: rgb(212, 238, 212);
+  border: solid rgb(185, 201, 185) 1px;
+  background: rgb(196, 214, 196);
   max-width: 325px;
   min-width: 325px;
   margin: 12px;
   padding: 5px 20px;
   position: relative;
 }
-.read-more-btn {
+/* .read-more-btn {
+  margin-top: 50px;
   position: absolute;
   bottom: 0;
   right: 0;
-}
+} */
 .plant-image {
   margin: 20px
 }
 .facts {
-  line-height: 2em;
+  line-height: 2.4em;
+}
+.sci-name {
+  font-size: 30px;
+  color: grey;
 }
 .added {
   color: grey

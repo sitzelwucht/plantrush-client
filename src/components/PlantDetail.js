@@ -64,6 +64,7 @@ class PlantDetail extends Component {
 
                 <div className="plant-details">
                     <div className="facts">
+                    <div className="sci-name">Scientific name: {plant.scientific_name}</div>
                         <div className="watering">Watering: <span>{plant.watering} </span></div>
                         <div className="lighting">Light: <span>{plant.light}</span> </div>
                         <div className="added">Added: {Moment(plant.added).format(' DD MMM yyyy')} </div>

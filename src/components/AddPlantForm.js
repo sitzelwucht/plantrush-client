@@ -44,7 +44,7 @@ export default class AddPlantForm extends Component {
 
                 <Form.Group controlId="formBasicEmail">
                     <Form.Label>Scientific name</Form.Label>
-                    <Form.Control name="sciName" type="text" placeholder="Enter name" />
+                    <Form.Control name="scientific_name" type="text" placeholder="Enter scientific name" />
 
                 </Form.Group>
 

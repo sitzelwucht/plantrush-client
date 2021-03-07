@@ -15,10 +15,11 @@ export default class MyPlantsList extends Component {
         loggedInUser: null
     }
 
+    
     handleAddPlant = (e) => {
         e.preventDefault()
         let name = e.target.name.value
-        let sciName = e.target.sciName.value
+        let scientific_name = e.target.scientific_name.value
         let description = e.target.description.value
         let watering = e.target.watering.value
         let light = e.target.light.value
@@ -27,7 +28,7 @@ export default class MyPlantsList extends Component {
 
     axios.post(`${config.API_URL}/api/add-plant`, {
         name: name,
-        scientific_name: sciName,
+        scientific_name: scientific_name,
         description: description,
         watering: watering,
         light: light,
@@ -49,11 +50,14 @@ export default class MyPlantsList extends Component {
     }
 
 componentDidMount(){
-
+    // show only user's own plants
+    //TODO fix null user
     axios.get(`${config.API_URL}/api/myplants`)
       .then((response) => {
-          
-        this.setState({ plants: response.data})
+        let myPlants = response.data.filter((item) => {
+            return item.added_by === this.props.user._id
+        })
+        this.setState({ plants: myPlants})
       })
       .catch(() => {
         console.log('failed to fetch plants')

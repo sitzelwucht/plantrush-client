@@ -32,11 +32,11 @@ export default class MyPage extends Component {
                 <div className="container tab">
 
                     <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
-                        <Tab eventKey="plants" aria-selected="true"  title="Plants">
-                            <MyPlantsList user={this.props.user}/>
+                        <Tab eventKey="plants" aria-selected="true"  title="My Plants">
+                            <MyPlantsList user={this.props.user} />
                         </Tab>
                         <Tab eventKey="posts" title="Posts">
-                            <MyPostsList />
+                            <MyPostsList user={this.props.user} />
                         </Tab>
                         </Tabs>
 
