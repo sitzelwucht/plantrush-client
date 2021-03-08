@@ -24,6 +24,10 @@ class App extends Component {
     error: null,
   }
 
+  // remove validation error message from modal when closing it
+  resetErrorMsg = () => {
+    this.setState({ error: null })
+  }
 
   handleSignup = (e) => {
     e.preventDefault()
@@ -106,7 +110,7 @@ class App extends Component {
       <Switch>
 
         <Route exact path="/" render={() => {
-          return <Landing onSignup={this.handleSignup} onLogin={this.handleLogin} msg={error} />
+          return <Landing onSignup={this.handleSignup} onLogin={this.handleLogin} msg={error} resetErr={this.resetErrorMsg} />
           }
         } />
 

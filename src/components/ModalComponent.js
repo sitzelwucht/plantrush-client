@@ -10,6 +10,8 @@ export default class ModalComponent extends Component {
 
 
       handleClose = () => {
+        // remove error message from modal
+       this.props.resetErr()
           this.setState({
             show: false
           })
@@ -36,7 +38,7 @@ export default class ModalComponent extends Component {
               <Modal.Body>
               
               {this.props.modalBody}
-              <Modal.Footer><span clasName="error">{this.props.msg}</span></Modal.Footer>
+              <Modal.Footer>{ this.props.msg && <span className="error">{this.props.msg}</span> }</Modal.Footer>
               </Modal.Body>
             </Modal>
             </div>

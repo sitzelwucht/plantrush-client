@@ -42,14 +42,16 @@ import { withRouter } from 'react-router-dom'
                                btnStyle="primary green" 
                                modalHeading="log in"
                                msg={this.props.msg}
-                               modalBody={<LoginForm onLogin={this.props.onLogin}/>}    
+                               resetErr={this.props.resetErr} 
+                               modalBody={<LoginForm onLogin={this.props.onLogin} />}    
                                />
                            <ModalComponent 
                                btnTitle="sign up" 
                                btnStyle="secondary darkgreen" 
                                modalHeading="sign up"
                                msg={this.props.msg}
-                               modalBody={<SignupForm onSignup={this.props.onSignup}/>}    
+                               resetErr={this.props.resetErr}
+                               modalBody={<SignupForm onSignup={this.props.onSignup} />}    
                                />
                            </div>     
                        </div>
