@@ -45,7 +45,7 @@ export default class NavBar extends Component {
               <div className="nav-bottom">
                 {
                     user ? (<> <div className="username"> Logged in as {user.email.toString()}</div>
-                      <Button onClick={this.props.onLogout} variant="info logoutBtn">Logout</Button> </>) : null
+                      <Button onClick={this.props.onLogout} variant="dark logoutBtn">Logout</Button> </>) : null
                   }
               </div>
             </div>

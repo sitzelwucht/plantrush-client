@@ -14,7 +14,7 @@ import SearchPosts from './components/SearchPosts'
 import PostDetail from './components/PostDetail'
 import PlantDetail from './components/PlantDetail'
 import NotFound from './components/NotFound'
-
+import DetailSearch  from './components/DetailSearch'
 
 class App extends Component {
 
@@ -136,6 +136,10 @@ class App extends Component {
 
         <Route path="/plant/:plantid" render={(routeProps) => {
           return <PlantDetail user={loggedInUser} plantid={routeProps.match.params.plantid} />
+        }} />
+
+        <Route path="/detailed-search/:plant" render={(routeProps) => {
+          return <DetailSearch user={loggedInUser} plant={routeProps.match.params.plant} />
         }} />
 
         <Route component={NotFound} />

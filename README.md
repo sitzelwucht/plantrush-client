@@ -18,8 +18,9 @@ User can upload images of their houseplants, get information about their plant, 
 
 ## Backlog
 
-- implement external API search
+~- implement external API search~
 - expand on different types of interaction between users
+- implement detailed search from external API
 
 ## Routes
 

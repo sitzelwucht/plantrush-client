@@ -148,6 +148,7 @@ h2 {
 
 .welcome {
   display: flex;
+  font-family: 'comfortaa';
   justify-content: space-between;
   background: rgba(20,20,20,.4);
   color: white;
@@ -304,7 +305,7 @@ h5 {
 
 
 .searchbar {
-  margin: 150px auto;
+  margin: 150px auto 50px auto;
   width: 40%;
 }
 
@@ -312,15 +313,33 @@ h5 {
   font-family: 'Comfortaa';
   color: rgba(20,20,20,.7);
   margin: 30px 0;
+
 }
 
 .results {
   padding: 20px;
   max-width: 40%;
   margin-left: 600px;
+  max-height: 550px;
+  overflow-y: scroll;
+  color: rgba(20,20,20,.7);
+}
+.plant-box {
+  margin: 50px 0;
+  display: flex;
+  justify-content: space-between;
 }
 
+.plant-box-header {
+  font-family: 'Comfortaa';
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
 
+.plant-box-header > * {
+  padding: 10px 30px 0 10px;
+}
 /* plant list */
 
 .plants {

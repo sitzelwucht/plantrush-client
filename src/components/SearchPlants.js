@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { InputGroup, FormControl, Button, Form } from 'react-bootstrap'
 import axios from 'axios'
 import config from '../config'
+import { Link } from 'react-router-dom'
 
 
 export default class SearchPlants extends Component {
@@ -24,11 +25,9 @@ export default class SearchPlants extends Component {
         .catch(err => console.log(err))
     }
 
-
-
     render() {
         const { results, msg } = this.state
- 
+    
         return (
             <>
             <div className="searchbar">
@@ -36,7 +35,7 @@ export default class SearchPlants extends Component {
               <Form onSubmit={this.handleSearch}>
                  <InputGroup size="lg">
                     <FormControl name="input" aria-label="Large" aria-describedby="inputGroup-sizing-sm" />
-                    <Button type="submit">Go!</Button>
+                    <Button variant="info" type="submit">Go!</Button>
                 </InputGroup>
                 </Form>
             </div>
@@ -46,11 +45,17 @@ export default class SearchPlants extends Component {
             { results.data &&
               results.data.map((item, i) => {
                 return <div key={i} className="plant-box">
-                  <h3>{item.common_name}</h3>
-                  <img src={item.image_url} alt="plant" height="100" />
-                  <div>{item.family}</div>
-                  <div>{item.family.common_name}</div>
-                  <div>{item.scientific_name}</div>
+                <div className="left">
+                  <div className="plant-box-header">
+                    <h3>{item.scientific_name}</h3>
+                    <div>{item.common_name}</div>
+                  </div>
+                 <Link to={`/detailed-search/${item.slug}`}><Button variant="link" >More info</Button> </Link> 
+                </div>
+                
+                <div className="right">
+                  { item.image_url ? <img src={item.image_url} alt="plant" height="100" /> : <img src="/images/placeholder_plant.png" height="150" alt="" />}
+                </div>
                 </div>
               })
 
