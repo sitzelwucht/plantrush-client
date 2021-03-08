@@ -31,17 +31,21 @@ export default class MyPage extends Component {
 
     render() {
         const { user } = this.props
+        const { loggedInUser } = this.state
         Moment.locale('en');
+        
+        if (!user) {
+            return <div>Hello nobody there</div>
+        }
+
         return (
             <div className="my-page">
                 <div className="my-page-header">
                     <h1>My Page</h1>
                     <div className="userinfo">
-
-                    <div>Username: {user.email}</div>
-                    <div>Registered: {Moment(user.registered).format('DD MMM yyyy')}</div>
-                    <div><Button variant="light">Edit information</Button> </div>
-
+                        <div>Username: {user.email}</div>
+                        <div>Registered: {Moment(user.registered).format('DD MMM yyyy')}</div>
+                        <div><Button variant="light">Edit information</Button> </div>
                     </div>
                 </div>
                    
@@ -58,15 +62,7 @@ export default class MyPage extends Component {
 
                     </div>
                 </div>
-    </div>)
+            </div>)
 
-
-
-
-}
-
-
-
-
-
+    }
 }

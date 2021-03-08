@@ -5,7 +5,7 @@ import axios from 'axios'
 import config from '../config'
 
 export default class NavBar extends Component {
-
+  
 
 
   componentDidMount(){

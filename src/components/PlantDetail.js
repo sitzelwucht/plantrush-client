@@ -14,6 +14,7 @@ class PlantDetail extends Component {
         plant: {},
         showForm: false,
         loading: true,
+        loggedInUser: null
     }
 
 

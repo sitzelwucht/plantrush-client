@@ -77,6 +77,12 @@ componentDidMount(){
 
         const { posts, showForm } = this.state
 
+        const { user } = this.props
+
+        if (!user) {
+           return <div>Hello nobody there</div>
+        }
+   
         return (
                 
             <div className="posts">

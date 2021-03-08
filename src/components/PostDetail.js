@@ -119,6 +119,10 @@ class PostDetail extends Component {
         const { post, showForm, showCommentForm, comments, isLoading } = this.state
         const { user } = this.props
 
+        if (!user) {
+           return <div>Hello nobody there</div>
+        }
+   
         if (isLoading) {
             return <div>Loading...</div>
         }

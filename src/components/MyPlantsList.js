@@ -79,7 +79,12 @@ componentDidMount(){
     render() {
 
      const { plants, showForm } = this.state
-    
+    const { user } = this.props
+
+     if (!user) {
+        return <div>Hello nobody there</div>
+     }
+
         return ( 
                 <div className="plants">
                     <div className="sub-header">
