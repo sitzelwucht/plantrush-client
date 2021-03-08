@@ -48,7 +48,12 @@ componentDidMount(){
 
     axios.get(`${config.API_URL}/api/myposts/`)
       .then((response) => {
-        this.setState({ posts: response.data })
+          let sorted = response.data.sort((a, b) => {
+              if (a.created < b.created) return 1
+              else if (a.created > b.created) return -1
+              else return 0
+          })
+        this.setState({ posts: sorted})
       })
       .catch(() => {
         console.log('failed to fetch posts')

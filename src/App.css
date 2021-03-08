@@ -175,26 +175,29 @@ h2 {
 /* USER PAGE */ 
 
 .my-page {
-  margin: 50px auto 0 auto;
-}
-.my-page-container {
-  display: flex;
-  justify-content: space-between;
-  width: 60%;
-  margin-top: 30px;
   margin-left: 550px;
-
+  width: 60%;
 }
+
 .my-page-header {
-  width: 40%;
-  margin: 10px auto 0 auto;
   font-size: 40px;
   font-family: 'comfortaa';
   color: rgb(155, 155, 155);
+  display: flex;
   justify-content: space-between;
+  width: 100%;
+  padding: 20px;
 }
-.my-page-container h1 {
-  font-family: 'Comfortaa';
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  color: rgba(0,0,0,.7);
+  font-size: 13px;
+}
+.userinfo > div {
+  padding: 10px;
 }
 
 .sub-header {
@@ -227,12 +230,17 @@ h2 {
 }
 
 .tab a {
-  font-size: 35px;
+  font-size: 28px;
   color: rgb(109, 163, 151);
   font-family: 'comfortaa';
   letter-spacing: .1em;
   width: 50%;
   text-align: center;
+  transition: .5s
+}
+
+.tab a:hover {
+  background: rgb(202, 202, 207)
 }
 .nav-item.nav-link {
   background-color: rgb(223, 223, 223);
@@ -246,30 +254,36 @@ h2 {
   outline: none!important;
 }
 .list-item {
-  margin: 25px 20px;
-  padding: 20px;
-  background: rgb(240, 240, 240)
+  margin: 0 25px 25px 25px;
+  padding-bottom: 25px;
+  background: rgb(240, 240, 240);
+  border-radius: 5px;
 }
 .list-item a:hover {
   text-decoration: none;
 }
 .item-row {
   display: flex;
-  width: 95%;
   color: rgba(20,20,20,.7);
-  position: relative;
   margin: auto;
+}
+.preview {
+  margin: 0;
+  padding: 10px;
+}
+.small-link {
+  font-size: 14px;
 }
 h5 {
   padding: 10px;
-  color: rgba(92, 87, 89, 0.7);
-  border-bottom: 1px solid grey;
+  background: rgb(202, 202, 202);
   display: flex;
   justify-content: space-between;
+  border-radius: 5px 5px 0 0;
 }
 
-.post-author {
 
+.post-author {
   font-weight: 300!important;
   font-size: 15px;
   margin: 5px;
@@ -368,11 +382,16 @@ h5 {
 }
 .comment-section {
   margin: 50px auto;
-  width: 60%;
+  width: 80%;
+  border-top: 2px solid rgb(49, 49, 49);
+}
+.comments {
+  font-size: 30px;
+  padding: 20px;
 }
 .comment-container {
   margin-top: 50px;
-  background: rgb(204, 204, 204);
+  background: rgb(212, 212, 212);
 }
 .comment-container * {
   margin: 5px;

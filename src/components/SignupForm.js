@@ -19,7 +19,7 @@ export default class SignupForm extends Component {
                 </Form.Text>
             </Form.Group>
 
-            <Form.Group controlId="formBasicPassword">
+            <Form.Group controlId="formBasicPassword2">
                 <Form.Label>Confirm Password</Form.Label>
                 <Form.Control name="password2" type="password" placeholder="Password" />
             </Form.Group>

@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import axios from 'axios'
 import config from '../config'
-import Moment from 'moment';
+import Moment from 'moment'
 import { Button } from 'react-bootstrap'
 import EditPostForm from './EditPostForm'
 import CommentForm from './CommentForm'
@@ -97,7 +97,12 @@ class PostDetail extends Component {
         // fetch comments with the same post id
         axios.get(`${config.API_URL}/api/comments/${this.props.postid}`)
         .then((response) => {
-            this.setState({ comments: response.data, isLoading: false })
+            let sorted = response.data.sort((a, b) => {
+                if (a.time < b.time) return 1
+                else if (a.time > b.time) return -1
+                else return 0
+            }) 
+            this.setState({ comments: sorted, isLoading: false })
             })
         .catch(() => {
             console.log('failed to fetch comments')
@@ -134,26 +139,36 @@ class PostDetail extends Component {
                   
            
                 </div>
+
                 { showForm && <EditPostForm postid={post._id} /> } 
+
                 <div className="posted">  <div>{post.authorName}</div> {Moment(post.created).format('dddd DD MMM yyyy')} </div>
                 { post.imageurl && <img src={post.imageurl} height="300" alt="" /> } 
                 <p>{post.content}</p>
             
-                <div className="comment-section">
-                
-               <div>{ showCommentForm ?  <CommentForm onAdd={this.handleAddComment}/> : <Button onClick={this.handleShowCommentForm}>Add comment</Button> } </div> 
+
+            <div className="comment-section">
+
+
+                <div className="comments"> 
+                    { comments.length === 1 ? <div>{comments.length} comment</div> : <div>{comments.length} comments</div>} 
+                </div>
+
+               <div>
+                    { showCommentForm ?  <CommentForm onAdd={this.handleAddComment}/> : <Button onClick={this.handleShowCommentForm}>Add comment</Button> } 
+               </div> 
+            
               
               {
                 comments.map((item, i) => {
                     return <div key={i} className="comment-container"> 
                     <div className="comment-title">{item.title}</div> 
-                    <div className="comment-time">{item.authorName}  ||  {Moment(item.time).format('MMMM Do YYYY, h:mm:ss a')}</div> 
+                    <div className="comment-time">{item.authorName}  on  {Moment(item.time).format('MMMM Do YYYY, h:mm:ss a')}</div> 
                     <div className="comment-content">{item.content} </div>
                     </div>
                 })
 
               }
-              
               </div>
             </div>
 

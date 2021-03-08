@@ -7,6 +7,7 @@ import axios from 'axios'
 import config from '../config'
 import { withRouter } from 'react-router-dom'
 
+
  class Landing extends Component {
 
     state = {
@@ -38,17 +39,17 @@ import { withRouter } from 'react-router-dom'
                        <h2><img src="/images/noun_Plant_9393.svg" alt="" /><span className="darkgreen light">plant</span><span>rush</span></h2>
                            <div className="intro-btns">
                            <ModalComponent 
-                               btnTitle="log in" 
+                               btnTitle="Log in" 
                                btnStyle="primary green" 
-                               modalHeading="log in"
+                               modalHeading="Log in"
                                msg={this.props.msg}
                                resetErr={this.props.resetErr} 
                                modalBody={<LoginForm onLogin={this.props.onLogin} />}    
                                />
                            <ModalComponent 
-                               btnTitle="sign up" 
+                               btnTitle="Sign up" 
                                btnStyle="secondary darkgreen" 
-                               modalHeading="sign up"
+                               modalHeading="Sign up"
                                msg={this.props.msg}
                                resetErr={this.props.resetErr}
                                modalBody={<SignupForm onSignup={this.props.onSignup} />}    
