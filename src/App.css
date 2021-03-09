@@ -343,6 +343,7 @@ h5 {
   margin: 50px 0;
   display: flex;
   justify-content: space-between;
+  border: 1px rgb(173, 173, 173) solid;
 }
 
 .plant-box-header {
@@ -396,8 +397,10 @@ h5 {
 }
 
 .detail-box img {
-  filter: invert(51%) sepia(27%) saturate(0%) hue-rotate(155deg) brightness(101%) contrast(80%);
   margin: 4px;
+}
+.svg {
+  filter: invert(51%) sepia(27%) saturate(0%) hue-rotate(155deg) brightness(101%) contrast(80%);
 }
 .posted {
   text-align: right;
@@ -508,6 +511,7 @@ h5 {
 }
 .trefle-img {
   margin-top: 50px;
+  max-width: 450px;
 }
 .trefle-facts div {
   padding: 5px;
