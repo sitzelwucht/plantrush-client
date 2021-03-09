@@ -324,7 +324,7 @@ h5 {
 
 
 .searchbar {
-  margin: 100px auto 50px auto;
+  margin: 70px auto 50px auto;
   width: 40%;
 }
 
@@ -336,17 +336,18 @@ h5 {
 
 .results {
   padding: 20px;
-  max-width: 70%;
+  max-width: 60%;
   margin: auto;
   max-height: 550px;
   overflow-y: scroll;
   color: rgba(20,20,20,.7);
 }
 .plant-box {
-  margin: 50px 0;
+  margin: 30px 0;
   display: flex;
   justify-content: space-between;
   border: 1px rgb(173, 173, 173) solid;
+  background-color: red;
 }
 
 .plant-box-header {
@@ -435,7 +436,7 @@ h5 {
   border-top: 2px solid rgba(49, 49, 49, .4);
 }
 .comments {
-  font-size: 16px;
+  font-size: 20px;
   padding: 20px 0;
 }
 .comment-container {
@@ -517,7 +518,12 @@ h5 {
 }
 .trefle-img {
   margin-top: 50px;
-  max-width: 350px;
+  max-width: 650px;
+  height: auto;
+}
+
+.trefle-img img {
+  max-width: 450px;
 }
 .trefle-facts div {
   padding: 5px;
@@ -528,7 +534,7 @@ h5 {
 }
 .dist-list {
   border: 1px solid grey;
-  font-size: 10px;
+  font-size: 15px;
 }
 .dist-list * {
   padding: 1px!important

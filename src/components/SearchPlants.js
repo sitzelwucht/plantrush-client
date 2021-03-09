@@ -50,7 +50,7 @@ export default class SearchPlants extends Component {
                     <h3>{item.scientific_name}</h3>
                     <div>{item.common_name}</div>
                   </div>
-                 <Link to={`/detailed-search/${item.slug}`}><Button variant="link" >More info</Button> </Link> 
+                 <Link to={`/detailed-search/${item.slug}`}><Button variant="light" >More info</Button> </Link> 
                 </div>
                 
                 <div className="right">
