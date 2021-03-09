@@ -60,7 +60,7 @@ h2 {
   background: rgb(255, 113, 18);
   color: white;
   padding: 5px;
-  font-size: 15px;
+  font-size: 10px;
 }
 
 /* navbar */
@@ -156,7 +156,7 @@ h2 {
   width: 50%;
   margin: 150px auto;
   position: static;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .welcome {
@@ -166,7 +166,7 @@ h2 {
   background: rgba(20,20,20,.4);
   color: white;
   margin: 0;
-  padding: 25px;
+  padding: 15px;
 }
 
 .welcome span {
@@ -180,7 +180,7 @@ h2 {
 }
 .fact {
   width: 40%;
-  font-size: 16px;
+  font-size: 12px;
   margin: 20px auto;
   padding: 10px;
   background: rgb(152, 173, 152);
@@ -194,7 +194,7 @@ h2 {
 }
 
 .my-page-header {
-  font-size: 40px;
+  font-size: 30px;
   font-family: 'comfortaa';
   color: rgb(155, 155, 155);
   display: flex;
@@ -379,15 +379,15 @@ h5 {
 .detail-box {
   background: rgb(238, 238, 238);
   padding: 20px;
-  max-width: 55%;
+  width: 75%;
   margin: 50px auto
 }
 .detail-header {
   border-bottom: 1px dashed rgb(58, 58, 58);
   color: rgb(58, 58, 58);
   font-family: 'comfortaa';
-  font-size: 40px;
-  padding: 20px;
+  font-size: 25px;
+  padding: 15px;
   display: flex;
   justify-content: space-between;
 }
@@ -404,7 +404,7 @@ h5 {
 }
 .posted {
   text-align: right;
-  font-size: 20px;
+  font-size: 10px;
   margin: 10px;
   color: rgb(151, 151, 151)
 }
@@ -430,7 +430,7 @@ h5 {
   border-top: 2px solid rgba(49, 49, 49, .4);
 }
 .comments {
-  font-size: 30px;
+  font-size: 16px;
   padding: 20px 0;
 }
 .comment-container {
@@ -443,10 +443,10 @@ h5 {
 }
 .comment-title {
   font-family: 'comfortaa';
-  font-size: 20px;
+  font-size: 15px;
 }
 .comment-time {
-  font-size: 15px;
+  font-size: 10px;
   color: grey;
 }
 .comment-content {
@@ -455,7 +455,7 @@ h5 {
 /* plant details */
 
 .plant-details {
-  font-size: 20px;
+  font-size: 15px;
   padding: 15px;
   display: flex;
   justify-content: space-evenly;
@@ -491,7 +491,7 @@ h5 {
   line-height: 2.4em;
 }
 .sci-name {
-  font-size: 30px;
+  font-size: 12px;
   color: grey;
 }
 .added {
@@ -503,7 +503,7 @@ h5 {
   justify-content: space-around;
 }
 .trefle-facts {
-  font-size: 20px;
+  font-size: 15px;
   color: rgb(40,40,40);
   display: flex;
   margin: 15px;
@@ -511,7 +511,7 @@ h5 {
 }
 .trefle-img {
   margin-top: 50px;
-  max-width: 450px;
+  max-width: 350px;
 }
 .trefle-facts div {
   padding: 5px;
@@ -522,7 +522,7 @@ h5 {
 }
 .dist-list {
   border: 1px solid grey;
-  font-size: 15px;
+  font-size: 10px;
 }
 .dist-list * {
   padding: 1px!important
