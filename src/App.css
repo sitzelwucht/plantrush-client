@@ -447,15 +447,9 @@ h5 {
   max-width: 325px;
   min-width: 325px;
   margin: 12px;
-  padding: 5px 20px;
+  padding: 15px 20px;
   position: relative;
 }
-/* .read-more-btn {
-  margin-top: 50px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-} */
 .plant-image {
   margin: 20px
 }
@@ -469,6 +463,47 @@ h5 {
 .added {
   color: grey
 }
+
+.trefle-box {
+  display: flex;
+  justify-content: space-between;
+}
+.trefle-facts {
+  font-size: 20px;
+  color: rgb(40,40,40);
+  display: flex;
+  margin: 15px;
+  flex-direction: column;
+}
+
+.trefle-facts div {
+  padding: 5px;
+}
+
+.trefle-facts span {
+  font-weight: bold;
+}
+.trefle-images {
+  padding: 30px;
+}
+
+.trefle-images div {
+  margin: 10px;
+}
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 5px;
+}
+
+.leaf {
+  background: rgb(204, 214, 199)
+}
+
+.flower {
+  background: rgb(214, 199, 212)
+}
+
 
 /* search results */
 

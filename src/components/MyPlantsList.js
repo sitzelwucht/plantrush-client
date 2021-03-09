@@ -51,7 +51,6 @@ export default class MyPlantsList extends Component {
 
 componentDidMount(){
     // show only user's own plants
-    //TODO fix null user
     axios.get(`${config.API_URL}/api/myplants`)
       .then((response) => {
         let myPlants = response.data.filter((item) => {
@@ -78,12 +77,12 @@ componentDidMount(){
 
     render() {
 
-     const { plants, showForm } = this.state
-    const { user } = this.props
+        const { plants, showForm } = this.state
+        const { user } = this.props
 
-     if (!user) {
-        return <div>Hello nobody there</div>
-     }
+        if (!user) {
+            return <div>Hello nobody there</div>
+        }
 
         return ( 
                 <div className="plants">

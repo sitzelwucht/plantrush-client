@@ -159,7 +159,7 @@ class PostDetail extends Component {
                 </div>
 
                <div>
-                    { showCommentForm ?  <CommentForm onAdd={this.handleAddComment}/> : <Button onClick={this.handleShowCommentForm}>Add comment</Button> } 
+                    { showCommentForm ?  <CommentForm onAdd={this.handleAddComment}/> : <Button variant="info" onClick={this.handleShowCommentForm}>Add comment</Button> } 
                </div> 
             
               

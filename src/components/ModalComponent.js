@@ -11,7 +11,7 @@ export default class ModalComponent extends Component {
 
       handleClose = () => {
         // remove error message from modal
-       this.props.resetErr()
+          this.props.resetErr()
           this.setState({
             show: false
           })

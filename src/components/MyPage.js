@@ -31,7 +31,7 @@ export default class MyPage extends Component {
 
     render() {
         const { user } = this.props
-        const { loggedInUser } = this.state
+    
         Moment.locale('en');
         
         if (!user) {
