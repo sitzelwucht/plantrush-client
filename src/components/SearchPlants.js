@@ -29,7 +29,7 @@ export default class SearchPlants extends Component {
         const { results, msg } = this.state
     
         return (
-            <>
+            <section className="main-container">
             <div className="searchbar">
               <h1>search plants</h1>
               <Form onSubmit={this.handleSearch}>
@@ -61,7 +61,7 @@ export default class SearchPlants extends Component {
 
             }
             </div>
-            </>
+            </section>
         )
     }
 }

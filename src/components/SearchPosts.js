@@ -58,7 +58,7 @@ export default class SearchPlants extends Component {
         const { filteredPosts, msg } = this.state
 
         return (
-            <>
+            <section className="main-container">
             <div className="searchbar">
             
             <h1>search posts</h1>
@@ -80,7 +80,7 @@ export default class SearchPlants extends Component {
             }
 
             </div>
-            </>
+            </section>
         )
     }
 }

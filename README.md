@@ -4,6 +4,10 @@
 
 User can upload images of their houseplants, get information about their plant, make posts to ask for help/advice and comment on posts of other users.
 
+
+![loginpage](https://user-images.githubusercontent.com/61108220/110463914-c619d000-80d2-11eb-8eb0-497bbbde4897.png)
+
+
 ## User Stories
 
 - 404 - error page when user tries to access a page that doesn’t exist so that they know it was their fault as a user
@@ -16,11 +20,20 @@ User can upload images of their houseplants, get information about their plant, 
 - myposts - user will get a summary of the posts they have made
 - post-search - user can search all posts containing key words
 
+
+![mypage](https://user-images.githubusercontent.com/61108220/110463957-d5008280-80d2-11eb-9e91-5edb51be4e96.png)
+
 ## Backlog
 
-~- implement external API search~
+- ~implement external API search~
 - expand on different types of interaction between users
-- implement detailed search from external API
+- ~implement detailed search from external API~
+- ~optimize styling and layout~
+- implement search for posts
+
+
+![detailsearch](https://user-images.githubusercontent.com/61108220/110463997-e34e9e80-80d2-11eb-81b2-49b0fd4e3aaa.png)
+
 
 ## Routes
 

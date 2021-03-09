@@ -39,30 +39,32 @@ export default class MyPage extends Component {
         }
 
         return (
-            <div className="my-page">
-                <div className="my-page-header">
-                    <h1>My Page</h1>
-                    <div className="userinfo">
-                        <div>Username: {user.email}</div>
-                        <div>Registered: {Moment(user.registered).format('DD MMM yyyy')}</div>
-                        <div><Button variant="light">Edit information</Button> </div>
+            <section className="main-container">
+                <div className="my-page">
+                    <div className="my-page-header">
+                        <h1>My Page</h1>
+                        <div className="userinfo">
+                            <div>Username: {user.email}</div>
+                            <div>Registered: {Moment(user.registered).format('DD MMM yyyy')}</div>
+                            <div><Button variant="light">Edit information</Button> </div>
+                        </div>
                     </div>
-                </div>
-                   
-                <div >
-                    <div className="tab">
-                    <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
-                        <Tab eventKey="plants" aria-selected="true"  title="My Plants">
-                            <MyPlantsList user={this.props.user} />
-                        </Tab>
-                        <Tab eventKey="posts" title="Newest Posts">
-                            <MyPostsList user={this.props.user} />
-                        </Tab>
-                        </Tabs>
+                    
+                    <div >
+                        <div className="tab">
+                        <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
+                            <Tab eventKey="plants" aria-selected="true"  title="My Plants">
+                                <MyPlantsList user={this.props.user} />
+                            </Tab>
+                            <Tab eventKey="posts" title="Newest Posts">
+                                <MyPostsList user={this.props.user} />
+                            </Tab>
+                            </Tabs>
 
+                        </div>
                     </div>
                 </div>
-            </div>)
+            </section>)
 
     }
 }

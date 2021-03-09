@@ -128,8 +128,8 @@ class PostDetail extends Component {
         }
 
         Moment.locale('en');
-        return (
-        
+        return (    
+            <section className="main-container">
             <div className="detail-box">
                 <div className="detail-header">
                     <div>{post.title} </div>
@@ -175,9 +175,7 @@ class PostDetail extends Component {
               }
               </div>
             </div>
-
-       
-
+            </section>
         )
     }
 }

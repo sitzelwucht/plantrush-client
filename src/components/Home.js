@@ -69,7 +69,7 @@ export default class Home extends Component {
       }
       
         return (
-              <div>
+              <section className="main-container">
                 <div className="content-box">
                 { user ? <div className="welcome"><div>Welcome to your home page <span>{user.email}</span></div> 
                 <Clock /> </div>: 'Please log in to use this site because currently you\'re null' }
@@ -79,7 +79,7 @@ export default class Home extends Component {
                 </div>
                 </div>
             
-              </div>
+              </section>
         )
 
 

@@ -52,6 +52,7 @@ class PlantDetail extends Component {
 
         Moment.locale('en');
         return (
+            <section className="main-container">
             <div className="detail-box">
                 <div className="detail-header">
                     <div>{plant.name} </div>
@@ -77,6 +78,7 @@ class PlantDetail extends Component {
                 
                 <p>{plant.description}</p>
             </div>
+            </section>
         )
     }
 }

@@ -52,6 +52,7 @@ export default class DetailSearch extends Component {
         const { plant, plantData, plantDistribution, leafImages, flowerImages } = this.state
 
         return (
+            <section className="main-container">
             <div className="detail-box">
                 {
                     Object.keys(plant).length > 0 ? <>
@@ -65,11 +66,13 @@ export default class DetailSearch extends Component {
                                 <div><span>Edible:</span> {plantData.edible ? 'yes' : 'no'}</div>
 
                                 <div><span>Native Distribution: </span>
+                                <div className="dist-list">
                                     { plantDistribution ? 
                                         plantDistribution.map((item, i) => {
                                     return <div key={i}> {item}</div>
                                     }) : 'N/A'
                                     }
+                                    </div>
                                 </div> 
                                 
                             </div>
@@ -99,8 +102,8 @@ export default class DetailSearch extends Component {
                        </div> 
                     </> : <Loader />
                 }
-
             </div>
+            </section>
         )
     }
 }
