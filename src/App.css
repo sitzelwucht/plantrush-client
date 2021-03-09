@@ -212,7 +212,7 @@ h2 {
   font-size: 13px;
 }
 .userinfo > div {
-  padding: 10px;
+  padding: 5px;
 }
 
 .sub-header {
@@ -247,7 +247,7 @@ h2 {
 }
 
 .tab a {
-  font-size: 25px;
+  font-size: 18px;
   color: rgb(109, 163, 151);
   font-family: 'comfortaa';
   letter-spacing: .1em;
@@ -273,7 +273,7 @@ h2 {
 }
 .list-item {
   margin: 0 25px 25px 25px;
-  padding-bottom: 25px;
+  padding-bottom: 15px;
   background: rgb(240, 240, 240);
   border-radius: 5px;
 }
@@ -287,6 +287,7 @@ h2 {
 }
 .preview {
   margin: 0;
+  font-size: 12px;
   padding: 10px;
 }
 .small-link {
@@ -323,14 +324,14 @@ h5 {
 
 
 .searchbar {
-  margin: 120px auto 50px auto;
+  margin: 100px auto 50px auto;
   width: 40%;
 }
 
 .searchbar h1 {
   font-family: 'Comfortaa';
   color: rgba(20,20,20,.7);
-  margin: 30px 0;
+  margin: 15px 0;
 }
 
 .results {
@@ -340,7 +341,6 @@ h5 {
   max-height: 550px;
   overflow-y: scroll;
   color: rgba(20,20,20,.7);
-  border: 2px solid red;
 }
 .plant-box {
   margin: 50px 0;
@@ -368,7 +368,7 @@ h5 {
   max-height: 650px;
 }
 .plants form {
-  margin: 25px;
+  margin: 15px;
 }
 .plant-container {
   display: flex;
@@ -409,7 +409,7 @@ h5 {
 }
 .posted {
   text-align: right;
-  font-size: 10px;
+  font-size: 15px;
   margin: 10px;
   color: rgb(151, 151, 151)
 }
@@ -448,14 +448,15 @@ h5 {
 }
 .comment-title {
   font-family: 'comfortaa';
-  font-size: 15px;
+  font-size: 18px;
 }
 .comment-time {
-  font-size: 10px;
+  font-size: 14px;
   color: grey;
 }
 .comment-content {
   margin-top: 10px;
+  font-size: 15px;
 }
 /* plant details */
 
