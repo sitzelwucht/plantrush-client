@@ -81,7 +81,7 @@ componentDidMount(){
         const { user } = this.props
 
         if (!user) {
-            return <div>Hello nobody there</div>
+            return <div>logging out</div>
         }
 
         return ( 
@@ -96,7 +96,7 @@ componentDidMount(){
                
                      {
                         plants.map((item, i) => {
-                            return <div className="plant-item"><PlantItem 
+                            return <div className="plant-item" key={i}><PlantItem 
                                     id={item._id}
                                     imageurl={item.imageurl}
                                     name={item.name} 

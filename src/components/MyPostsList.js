@@ -80,17 +80,15 @@ componentDidMount(){
         const { user } = this.props
 
         if (!user) {
-           return <div>Hello nobody there</div>
+           return <div>logging out</div>
         }
    
         return (
                 
             <div className="posts">
-
                 <div className="sub-header">
                 {
-                    showForm ? <AddPostForm onAdd={this.handleAddPost} / > : <Button onClick={this.handleShowForm}>+ Add Post</Button>
-
+                    showForm ? <AddPostForm onAdd={this.handleAddPost} /> : <Button onClick={this.handleShowForm}> + Add Post</Button>
                 }
 
                 </div>

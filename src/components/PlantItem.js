@@ -11,7 +11,7 @@ export default class PlantItem extends Component {
                <div className="item-row">
                         <div>{this.props.imageurl && <img src={this.props.imageurl} height="75" alt=""/>}</div>
                         <div className="factfile">
-                            <div>{this.props.description.slice(0, 75)}...</div>
+                            <div>{this.props.description.slice(0, 65)}...</div>
                             <Link to={`/plant/${this.props.id}`}><Button className="read-more-btn" variant="light">more</Button></Link>
                         </div>
                         

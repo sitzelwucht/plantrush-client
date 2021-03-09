@@ -95,6 +95,7 @@ h2 {
   font-size: 35px;
   margin: 12px;
   padding: 0;
+  max-width: 100%;
   color: white;
 }
 .brand:hover {
@@ -109,7 +110,8 @@ h2 {
   display: flex;
   flex-direction: column;
   text-align: right;
-  font-family: 'comfortaa'
+  font-family: 'comfortaa';
+  max-width: 100%;
 }
 .nav-link a:hover {
     background: rgba(220,220,220,.5);
@@ -187,7 +189,7 @@ h2 {
 /* USER PAGE */ 
 
 .my-page {
-  margin: 40px auto;
+  margin: 30px auto;
   width: 60%;
 }
 
@@ -198,7 +200,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 20px;
+  padding: 15px;
 }
 
 .userinfo {
@@ -221,9 +223,11 @@ h2 {
 }
 .sub-header form {
   width: 500px;
-  margin: auto!important;
+  margin: auto;
   padding: 15px;
-  background: rgb(226, 226, 226);
+  background: rgb(240, 240, 240);
+  box-shadow: 4px 4px 18px rgb(150, 150, 150);
+  border-radius: 5px;
 }
 
 .sub-header button:hover  {
@@ -285,6 +289,7 @@ h2 {
 }
 .small-link {
   font-size: 14px;
+  margin-top: 40px;
 }
 h5 {
   padding: 10px;
@@ -324,7 +329,6 @@ h5 {
   font-family: 'Comfortaa';
   color: rgba(20,20,20,.7);
   margin: 30px 0;
-
 }
 
 .results {
@@ -355,18 +359,20 @@ h5 {
 
 .plants {
   overflow-y: scroll; 
+  max-height: 650px;
+}
+.plants form {
+  margin: 25px;
 }
 .plant-container {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  max-height: 600px;
 }
 .posts {
-  max-height: 700px;
+  max-height: 650px;
   overflow-y: scroll; 
 }
-
 /* DETAILS PAGES */
 
 .detail-box {
@@ -380,7 +386,7 @@ h5 {
   color: rgb(58, 58, 58);
   font-family: 'comfortaa';
   font-size: 40px;
-  padding: 40px;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
 }
@@ -388,9 +394,14 @@ h5 {
   margin: 50px;
   line-height: 1.4em;
 }
+
+.detail-box img {
+  filter: invert(51%) sepia(27%) saturate(0%) hue-rotate(155deg) brightness(101%) contrast(80%);
+  margin: 4px;
+}
 .posted {
   text-align: right;
-  font-size: 30px;
+  font-size: 20px;
   margin: 10px;
   color: rgb(151, 151, 151)
 }
@@ -411,13 +422,13 @@ h5 {
   margin: auto;
 }
 .comment-section {
-  margin: 50px auto;
+  margin: 70px auto;
   width: 80%;
-  border-top: 2px solid rgb(49, 49, 49);
+  border-top: 2px solid rgba(49, 49, 49, .4);
 }
 .comments {
   font-size: 30px;
-  padding: 20px;
+  padding: 20px 0;
 }
 .comment-container {
   margin-top: 50px;
@@ -455,11 +466,20 @@ h5 {
 .plant-item {
   border: solid rgb(185, 201, 185) 1px;
   background: rgb(196, 214, 196);
-  max-width: 325px;
-  min-width: 325px;
-  margin: 12px;
-  padding: 15px 20px;
+  box-shadow: 2px 1px 12px rgba(150, 150, 150, .8);
+  max-width: 260px;
+  min-width: 260px;
+  max-height: 200px;
+  min-height: 200px;
+  margin: 20px;
+  padding: 15px 0;
   position: relative;
+}
+
+.read-more-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 .plant-image {
   margin: 20px
