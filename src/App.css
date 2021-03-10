@@ -369,8 +369,8 @@ h5 {
   max-height: 650px;
 }
 .plants form {
+  width: 90%;
   margin: 10px;
-  background: red;
 }
 .plant-container {
   display: flex;
