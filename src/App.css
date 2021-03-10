@@ -369,7 +369,8 @@ h5 {
   max-height: 650px;
 }
 .plants form {
-  margin: 15px;
+  margin: 10px;
+  background: red;
 }
 .plant-container {
   display: flex;
@@ -492,7 +493,9 @@ h5 {
   right: 0;
 }
 .plant-image {
-  margin: 20px
+  margin: 20px;
+  max-width: 10%;
+  height: auto
 }
 .facts {
   line-height: 2.4em;
@@ -523,7 +526,9 @@ h5 {
 }
 
 .trefle-img img {
-  max-width: 450px;
+  /* max-width: 450px; */
+  width: 60%;
+  height: auto;
 }
 .trefle-facts div {
   padding: 5px;
@@ -623,6 +628,7 @@ h5 {
       right: 0;
       height: 60vh;
       margin: 0;
+      overflow-y: scroll;
     }
 
     .my-page {

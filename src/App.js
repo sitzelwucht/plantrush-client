@@ -105,7 +105,7 @@ class App extends Component {
     return (
 
       <div>
-      <NavBar onLogout={this.handleLogout} user={loggedInUser}/>
+      { loggedInUser && <NavBar onLogout={this.handleLogout} user={loggedInUser}/> }
 
       <Switch>
 
