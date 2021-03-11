@@ -3,7 +3,7 @@ import axios from 'axios'
 import { Redirect } from 'react-router-dom'
 import config from '../config'
 import Clock from './Clock'
-import { Redirect } from 'react-router'
+
 
 
 export default class Home extends Component {

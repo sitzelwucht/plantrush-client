@@ -487,8 +487,8 @@ h5 {
   border: solid rgb(185, 201, 185) 1px;
   background: rgb(196, 214, 196);
   box-shadow: 2px 1px 12px rgba(150, 150, 150, .8);
-  max-width: 250px;
-  min-width: 250px;
+  max-width: 200px;
+  min-width: 200px;
   max-height: 200px;
   min-height: 200px;
   margin: 15px;
