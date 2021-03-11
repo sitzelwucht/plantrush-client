@@ -44,6 +44,8 @@ export default class EditPostForm extends Component {
         })
     }
 
+    // TODO add image reupload
+    
     handleEditPost = (post) => {
         axios.patch(`${config.API_URL}/api/myposts/${this.props.postid}`, {
             title: post.title,

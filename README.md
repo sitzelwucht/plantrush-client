@@ -17,7 +17,7 @@ User can upload images of their houseplants, get information about their plant, 
 - navbar - navbar can be accessed only after login, then it can be used to navigate to different parts of the page or logging out
 - profile - User will be able to edit their information, see their plants and posts
 - myplants - user will get a summary of the plants they entered in the system
-- myposts - user will get a summary of the posts they have made
+- myposts - user will get a list of the latest posts
 - post-search - user can search all posts containing key words
 
 
@@ -29,7 +29,9 @@ User can upload images of their houseplants, get information about their plant, 
 - expand on different types of interaction between users
 - ~implement detailed search from external API~
 - ~optimize styling and layout~
-- implement search for posts
+- ~implement search for posts~
+- add password change
+- add more detailed editing options for post and plant models
 
 
 ![detailsearch](https://user-images.githubusercontent.com/61108220/110463997-e34e9e80-80d2-11eb-81b2-49b0fd4e3aaa.png)
@@ -115,10 +117,10 @@ User can upload images of their houseplants, get information about their plant, 
 
 ## Links
 
-#### Git
+- [Deployment on Heroku](https://plantrush.herokuapp.com)
 
+#### Git
 
 - [Repository - client](https://github.com/sitzelwucht/plantrush-client)
 - [Repository - server](https://github.com/sitzelwucht/plantrush-server)
 
-#### Slides

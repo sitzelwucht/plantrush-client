@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.85d498bc.chunk.css",
-    "main.js": "/static/js/main.be0de27d.chunk.js",
-    "main.js.map": "/static/js/main.be0de27d.chunk.js.map",
+    "main.css": "/static/css/main.2c5f7629.chunk.css",
+    "main.js": "/static/js/main.78ca68f7.chunk.js",
+    "main.js.map": "/static/js/main.78ca68f7.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.4ffa088a.js",
     "runtime-main.js.map": "/static/js/runtime-main.4ffa088a.js.map",
     "static/css/2.658248ec.chunk.css": "/static/css/2.658248ec.chunk.css",
@@ -10,7 +10,7 @@
     "static/js/2.a37708ea.chunk.js.map": "/static/js/2.a37708ea.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.658248ec.chunk.css.map": "/static/css/2.658248ec.chunk.css.map",
-    "static/css/main.85d498bc.chunk.css.map": "/static/css/main.85d498bc.chunk.css.map",
+    "static/css/main.2c5f7629.chunk.css.map": "/static/css/main.2c5f7629.chunk.css.map",
     "static/js/2.a37708ea.chunk.js.LICENSE.txt": "/static/js/2.a37708ea.chunk.js.LICENSE.txt",
     "static/media/App.css": "/static/media/pexels-scott-webb-305827.c86c2874.jpg"
   },
@@ -18,7 +18,7 @@
     "static/js/runtime-main.4ffa088a.js",
     "static/css/2.658248ec.chunk.css",
     "static/js/2.a37708ea.chunk.js",
-    "static/css/main.85d498bc.chunk.css",
-    "static/js/main.be0de27d.chunk.js"
+    "static/css/main.2c5f7629.chunk.css",
+    "static/js/main.78ca68f7.chunk.js"
   ]
 }

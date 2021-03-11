@@ -10,6 +10,7 @@ import MyPostsList from './MyPostsList'
 
 export default class MyPage extends Component {
 
+    //TODO add password editing
     
     state = {
         loggedInUser: null,
@@ -47,7 +48,7 @@ export default class MyPage extends Component {
             <section className="main-container">
                 <div className="my-page">
                     <div className="my-page-header">
-                        <h1>My Page</h1>
+                        <h3>My Page</h3>
                         <div className="userinfo">
                             <div>Username: {user.email}</div>
                             <div>Registered: {Moment(user.registered).format('DD MMM yyyy')}</div>

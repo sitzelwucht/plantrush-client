@@ -33,6 +33,8 @@ export default class EditPlantForm extends Component {
         })
     }
 
+    //TODO add scientific name editing, image reupload
+    
     handleDescChange = (e) => {
         let newDesc = e.target.value
         let clonePlant = JSON.parse(JSON.stringify(this.state.plant))
