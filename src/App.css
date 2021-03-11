@@ -190,12 +190,12 @@ h2 {
 /* USER PAGE */ 
 
 .my-page {
-  margin: 30px auto;
+  margin: 25px auto;
   width: 65%;
 }
 
 .my-page-header {
-  font-size: 22px;
+  font-size: 18px;
   font-family: 'comfortaa';
   color: rgb(155, 155, 155);
   display: flex;
@@ -216,21 +216,38 @@ h2 {
 }
 
 .sub-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
+  padding: 10px;
   border-radius: 7px;
   color: rgb(138, 138, 138);
 }
-.sub-header form {
-  width: 500px;
-  margin: auto;
+
+.form-row {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 5px;
+  max-width: 100%;
+}
+.form-row form {
+  width: 400px;
+  margin: 10px 5px 15px 5px;
   padding: 15px;
   background: rgb(240, 240, 240);
   box-shadow: 4px 4px 18px rgb(150, 150, 150);
   border-radius: 5px;
+  font-size: 11px;
 }
 
+.form-row img {
+  margin: 10px 0;
+  max-width:420px;
+  max-height:225px;
+  width: auto;
+  height: auto;
+}
+
+.sub-header input {
+  font-size: 10px;
+}
 .sub-header button:hover  {
   background: rgb(80, 29, 58);
 }
@@ -239,9 +256,7 @@ h2 {
   background: grey;
 }
 
-.form-img {
-  display: flex;
-}
+
 .spinner {
   margin: 150px;
 }
@@ -368,9 +383,7 @@ h5 {
   overflow-y: scroll; 
   max-height: 650px;
 }
-.plants form {
-  margin: 10px;
-}
+
 .plant-container {
   display: flex;
   flex-wrap: wrap;
@@ -490,11 +503,6 @@ h5 {
   position: absolute;
   bottom: 0;
   right: 0;
-}
-.plant-image {
-  margin: 20px;
-  max-width: 10%;
-  height: auto
 }
 .facts {
   line-height: 2.4em;

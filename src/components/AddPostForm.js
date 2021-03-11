@@ -35,7 +35,7 @@ export default class AddPostForm extends Component {
         const { msg } = this.props
 
         return (
-            <div className="form-img">
+            <div className="form-row">
                 <Form onSubmit={this.props.onAdd}>
                     <Form.Group controlId="formBasicEmail">
                         <Form.Label>Title</Form.Label>
@@ -60,7 +60,7 @@ export default class AddPostForm extends Component {
                     </Form>
 
 
-            <div className="plant-image">
+            <div>
 
             { !isLoading ? <Image style={{height: '450px'}} cloudName="plantrush" publicId={cloudinaryId}/> : <Loader />} 
                

@@ -34,7 +34,7 @@ export default class AddPlantForm extends Component {
         const { isLoading, imageUrl, cloudinaryId } = this.state
 
         return (
-            <div className="row">
+            <div className="form-row">
                 <Form onSubmit={this.props.onAdd}>
                 <Form.Group controlId="formBasicEmail">
                     <Form.Label>Name</Form.Label>
@@ -84,7 +84,7 @@ export default class AddPlantForm extends Component {
                 </Button>
                 </Form>
 
-                <div className="plant-image">
+                <div>
                 { !isLoading ? <Image style={{height: '450px'}} cloudName="plantrush" publicId={cloudinaryId}/> : <Loader />} 
                 </div>
             </div>
