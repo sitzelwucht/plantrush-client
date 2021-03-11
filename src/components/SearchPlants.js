@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { InputGroup, FormControl, Button, Form } from 'react-bootstrap'
 import axios from 'axios'
 import config from '../config'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 
 
 export default class SearchPlants extends Component {
@@ -28,6 +28,10 @@ export default class SearchPlants extends Component {
     render() {
         const { results, msg } = this.state
     
+        if (!this.props.user) {
+          return <Redirect to={'/'} /> 
+         }
+
         return (
             <section className="main-container">
             <div className="searchbar">

@@ -381,7 +381,6 @@ h5 {
   overflow-y: scroll; 
   max-height: 650px;
 }
-
 .plant-container {
   display: flex;
   flex-wrap: wrap;
