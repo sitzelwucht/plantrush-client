@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Tabs, Tab, Button } from 'react-bootstrap'
+import { Redirect } from 'react-router-dom'
 import axios from 'axios'
 import config from '../config'
 import Moment from 'moment';
@@ -35,8 +36,12 @@ export default class MyPage extends Component {
         Moment.locale('en');
         
         if (!user) {
-            return <div>Hello nobody there</div>
-        }
+            return <Redirect to={'/'} />
+          }
+
+        // if (!user) {
+        //     return <div>nobody there</div>
+        //   }
 
         return (
             <section className="main-container">

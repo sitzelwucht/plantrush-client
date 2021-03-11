@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { Component } from 'react'
-import { withRouter } from 'react-router-dom'
+import { withRouter, Redirect } from 'react-router-dom'
 import axios from 'axios'
 import config from '../config'
 import Moment from 'moment';
@@ -44,12 +44,17 @@ class PlantDetail extends Component {
         
       }
   
-
     
     render() {
 
         const { plant, showForm } = this.state
+        const { user } = this.props
 
+        // if (!user) {
+        //     // return <Redirect to={'/'} />
+        //     return <div>hello</div>
+        //  }
+    
         Moment.locale('en');
         return (
             <section className="main-container">

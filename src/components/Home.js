@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import { Redirect } from 'react-router-dom'
 import config from '../config'
 import Clock from './Clock'
 
@@ -62,11 +63,11 @@ export default class Home extends Component {
     render() {
 
       const { user } = this.props
-      const { fact, isLoading } = this.state
+      const { fact } = this.state
 
-        if (isLoading) {
-          return <div>Loading...</div>
-      }
+       if (!user) {
+         return <Redirect to={'/'} />
+       }
       
         return (
               <section className="main-container">

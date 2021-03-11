@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { Component } from 'react'
-import { withRouter } from 'react-router-dom'
+import { withRouter, Redirect } from 'react-router-dom'
 import axios from 'axios'
 import config from '../config'
 import Moment from 'moment'
@@ -49,8 +49,8 @@ class PostDetail extends Component {
         e.preventDefault()
         let title = e.target.title.value
         let content = e.target.content.value
-        let author = this.state.loggedInUser
-        let authorName = this.state.loggedInUser.email
+        let author = this.props.user
+        let authorName = this.props.user.email
         let post = this.props.postid
         
     axios.post(`${config.API_URL}/api/add-comment`, {
@@ -120,12 +120,9 @@ class PostDetail extends Component {
         const { user } = this.props
 
         if (!user) {
-           return <div>Hello nobody there</div>
+           return <Redirect to={'/'} />
         }
    
-        if (isLoading) {
-            return <div>Loading...</div>
-        }
 
         Moment.locale('en');
         return (    

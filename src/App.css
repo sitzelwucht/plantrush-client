@@ -370,7 +370,6 @@ h5 {
 }
 .plants form {
   margin: 10px;
-  background: red;
 }
 .plant-container {
   display: flex;
@@ -521,7 +520,7 @@ h5 {
 }
 .trefle-img {
   margin-top: 50px;
-  max-width: 650px;
+  max-width: 50%;
   height: auto;
 }
 

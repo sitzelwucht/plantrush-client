@@ -11,8 +11,8 @@ import { withRouter } from 'react-router-dom'
  class Landing extends Component {
 
     state = {
-        loggedInUser: null,
-        error: null
+        error: null,
+        loggedInUser: null
     }
 
   componentDidMount(){
@@ -29,10 +29,10 @@ import { withRouter } from 'react-router-dom'
 
 
     render() {
-
+        const { user } = this.props
         const { loggedInUser } = this.state
 
-        if(!loggedInUser) {
+        if(!user) {
             return (
                 <div className="landing">
                        <div className="intro">

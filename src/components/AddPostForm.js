@@ -32,6 +32,7 @@ export default class AddPostForm extends Component {
 
     render() {
         const { isLoading, imageUrl, cloudinaryId } = this.state
+        const { msg } = this.props
 
         return (
             <div className="form-img">
@@ -52,7 +53,7 @@ export default class AddPostForm extends Component {
                         <Form.Label>Image url</Form.Label>
                         <Form.Control name="imageurl" type="text" value={imageUrl} />
                     </Form.Group>
-
+                    { msg && <div className="error">{msg}</div> }
                     <Button variant="dark" type="submit">
                         Submit
                     </Button>

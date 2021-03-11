@@ -110,7 +110,7 @@ class App extends Component {
       <Switch>
 
         <Route exact path="/" render={() => {
-          return <Landing onSignup={this.handleSignup} onLogin={this.handleLogin} msg={error} resetErr={this.resetErrorMsg} />
+          return <Landing onSignup={this.handleSignup} onLogin={this.handleLogin} msg={error} resetErr={this.resetErrorMsg} user={loggedInUser} />
           }
         } />
 

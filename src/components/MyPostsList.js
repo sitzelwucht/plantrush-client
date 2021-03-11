@@ -11,7 +11,8 @@ export default class MyPostsList extends Component {
     state = {
         posts: [],
         showForm: false,
-        loggedInUser: null
+        loggedInUser: null,
+        error: null
     }
 
     handleAddPost = (e) => {
@@ -19,8 +20,8 @@ export default class MyPostsList extends Component {
         let title = e.target.title.value
         let content = e.target.content.value
         let imageurl = e.target.imageurl.value
-        let author = this.state.loggedInUser
-        let authorName = this.state.loggedInUser.email
+        let author = this.props.user
+        let authorName = this.props.user.email
         
     axios.post(`${config.API_URL}/api/create-post`, {
         title: title,
@@ -30,17 +31,18 @@ export default class MyPostsList extends Component {
         authorName: authorName
     })
     .then(response => {
-        console.log(response.data)
         this.setState({
             posts: [response.data, ...this.state.posts],
             showForm: false
         })
     })
+    .catch(err => this.setState({error: Object.values(err.response.data)[0]}))
 }
 
     handleShowForm = () => {
         this.setState({
-            showForm: true
+            showForm: true,
+            error: null
         })
     }
 
@@ -59,7 +61,7 @@ componentDidMount(){
         console.log('failed to fetch posts')
       })
 
-    if (!this.state.loggedInUser) {
+    if (!this.props.user) {
       axios.get(`${config.API_URL}/api/user`, { withCredentials: true })
         .then((response) => {
             this.setState({
@@ -75,7 +77,7 @@ componentDidMount(){
 
     render() {
 
-        const { posts, showForm } = this.state
+        const { posts, showForm, error } = this.state
 
         const { user } = this.props
 
@@ -88,7 +90,7 @@ componentDidMount(){
             <div className="posts">
                 <div className="sub-header">
                 {
-                    showForm ? <AddPostForm onAdd={this.handleAddPost} /> : <Button onClick={this.handleShowForm}> + Add Post</Button>
+                    showForm ? <AddPostForm onAdd={this.handleAddPost} msg={error} /> : <Button onClick={this.handleShowForm}> + Add Post</Button>
                 }
 
                 </div>

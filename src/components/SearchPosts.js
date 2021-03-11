@@ -37,7 +37,7 @@ export default class SearchPlants extends Component {
   
         if (!queryStr) {
           this.setState({
-            results: [],
+            filteredPosts: [],
             msg: ''
           })
         }
